@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/WelcomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/WelcomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
     "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Vinay",
+    "git-widget-placeholder": "Luke",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/luke jordan/Documents/GitHub/PROG7313_POE_PART2/BudgetBee"
   }
