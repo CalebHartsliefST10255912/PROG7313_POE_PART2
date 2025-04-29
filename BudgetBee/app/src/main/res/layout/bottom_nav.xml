@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <ImageButton
+        android:id="@+id/navHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_home"
+        android:background="@android:color/transparent"
+        android:contentDescription="Home" />
+
+    <ImageButton
+        android:id="@+id/navTransactions"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_transactions"
+        android:background="@android:color/transparent"
+        android:contentDescription="Transactions" />
+
+    <ImageButton
+        android:id="@+id/navCategories"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_categories"
+        android:background="@android:color/transparent"
+        android:contentDescription="Categories" />
+
+    <ImageButton
+        android:id="@+id/navProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_profile"
+        android:background="@android:color/transparent"
+        android:contentDescription="Profile" />
+</LinearLayout>

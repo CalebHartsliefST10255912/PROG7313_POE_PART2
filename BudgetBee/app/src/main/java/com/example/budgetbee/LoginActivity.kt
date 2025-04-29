@@ -18,4 +18,5 @@ class LoginActivity : AppCompatActivity() {
             finish() // prevent going back to login screen
         }
     }
+
 }
