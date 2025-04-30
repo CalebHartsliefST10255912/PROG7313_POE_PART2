@@ -19,9 +19,13 @@ abstract class AppDatabase : RoomDatabase(){
                 database.execSQL(
                     """""
                         CREATE TABLE IF NOT EXISTS 'users'(
-                            'username' TEXT NOT NULL,
+                            'userName' TEXT NOT NULL,
                             'password' TEXT NOT NULL,
-                            PRIMARY KEY('username')
+                            'userEmail' TEXT NOT NULL,
+                            'userPhone' TEXT NOT NULL,
+                            'userDOB' TEXT NOT NULL,
+                            'userId' INT NOT NULL,
+                            PRIMARY KEY('userId')
                             )
                             """.trimIndent()
 
@@ -34,7 +38,7 @@ abstract class AppDatabase : RoomDatabase(){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "budgetee_database"
+                    "budgetbee_db"
                 )
                     .addMigrations(MIGRATION_1_2)
                     //There is and issue with the database where the userDate is saved as a Date in
