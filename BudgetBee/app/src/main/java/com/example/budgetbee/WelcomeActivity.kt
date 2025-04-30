@@ -4,23 +4,30 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.budgetbee.R.*
+
 
 class WelcomeActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
+        setContentView(layout.activity_welcome)
 
-        val buttonLogin = findViewById<Button>(R.id.buttonLogin)
-        val buttonSignUp = findViewById<Button>(R.id.buttonSignUp)
+        //Values for the Welcome page buttons
+        val loginButton = findViewById<Button>(id.buttonLogin)
+        val registerButton = findViewById<Button>(id.buttonSignUp)
 
-        buttonLogin.setOnClickListener {
+        //ClickListener to take user to Login Page
+        loginButton.setOnClickListener(){
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        buttonSignUp.setOnClickListener {
+        //ClickListener to take user to Register Page
+        registerButton.setOnClickListener(){
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
