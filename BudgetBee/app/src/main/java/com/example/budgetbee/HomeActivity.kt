@@ -11,8 +11,16 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val buttonGoals = findViewById<Button>(R.id.buttonGoals)
+        val categories = findViewById<Button>(R.id.buttonGoToCategories)
+
         buttonGoals.setOnClickListener {
             startActivity(Intent(this, GoalsActivity::class.java))
+        }
+
+
+        categories.setOnClickListener(){
+            val intent =  Intent(this@HomeActivity, CategoriesActivity::class.java)
+            startActivity(intent)
         }
     }
 }

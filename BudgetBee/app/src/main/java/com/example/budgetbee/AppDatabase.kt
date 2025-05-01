@@ -8,11 +8,12 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 //@Database(entities = [UserEntity::class], version = 3, exportSchema = false)
-@Database(entities = [UserEntity::class, GoalsEntity::class], version = 4, exportSchema = false)
+@Database(entities = [UserEntity::class, GoalsEntity::class, CategoryEntity::class], version = 6, exportSchema = false)
 //
 abstract class AppDatabase : RoomDatabase(){
     abstract fun userDao(): UserDao
     abstract fun goalsDao(): GoalsDao // added goals - vinay
+    abstract fun categoryDao(): CategoryDao //added categories - Luke
 
     companion object{
         @Volatile private var INSTANCE: AppDatabase? = null
