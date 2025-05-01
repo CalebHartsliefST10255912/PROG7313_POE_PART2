@@ -2,6 +2,7 @@ package com.example.budgetbee
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -50,6 +51,9 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT)
                         .show()
 
+                    Log.d("LoginPassword", "Email: ${user.userEmail}, Phone: ${user.userPhone}, Password: ${user.password}")
+
+
                     val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
@@ -62,6 +66,11 @@ class LoginActivity : AppCompatActivity() {
             }
 
 
+        }
+
+        textForgotPassword.setOnClickListener(){
+            val intent = Intent(this, ResetPasswordActivity::class.java)
+            startActivity(intent)
         }
 
 
