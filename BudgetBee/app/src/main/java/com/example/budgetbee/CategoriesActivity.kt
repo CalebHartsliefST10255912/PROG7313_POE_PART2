@@ -56,15 +56,62 @@ class CategoriesActivity : AppCompatActivity() {
 
             val savedCategories = categoryDao.getAll()
 
-            adapter = CategoryAdapter(savedCategories) { selected ->
-                val intent = Intent(this@CategoriesActivity, CategoryDetailsActivity::class.java)
-//            intent.putExtra("CATEGORY_NAME", selected.name)
-                startActivity(intent)
+            val (moreCategory, otherCategories) = savedCategories.partition { it.name == "More" }
+            val orderedCategories = otherCategories + moreCategory
+
+            adapter = CategoryAdapter(orderedCategories) { selectedCategory ->
+                if (selectedCategory.name == "More") {
+                    showAddCategoryDialog()
+                } else {
+                    val intent = Intent(this@CategoriesActivity, CategoryDetailsActivity::class.java)
+                    intent.putExtra("CATEGORY_NAME", selectedCategory.name)
+                    startActivity(intent)
+                }
             }
+
+
 
             recyclerView.adapter = adapter
 
         }
 
     }
+
+    private fun showAddCategoryDialog() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        builder.setTitle("Add New Category")
+
+        val input = android.widget.EditText(this)
+        input.hint = "Enter category name"
+        builder.setView(input)
+
+        builder.setPositiveButton("Add") { dialog, _ ->
+            val categoryName = input.text.toString().trim()
+            if (categoryName.isNotEmpty()) {
+                val newCategory = CategoryEntity(name = categoryName, iconResId = R.drawable.blue_circle)
+
+                lifecycleScope.launch {
+                    withContext(Dispatchers.IO) {
+                        categoryDao.insert(newCategory)
+                    }
+                    refreshCategoryList()
+                }
+            }
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
+
+        builder.show()
+    }
+
+    private fun refreshCategoryList() {
+        lifecycleScope.launch {
+            val updatedCategories = withContext(Dispatchers.IO) {
+                categoryDao.getAll()
+            }
+            adapter.updateCategories(updatedCategories)
+        }
+    }
+
 }

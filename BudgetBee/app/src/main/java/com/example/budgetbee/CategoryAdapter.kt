@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CategoryAdapter(
-    private val categories: List<CategoryEntity>,
-    private val onClick: (String) -> Unit
+    private var categories: List<CategoryEntity>,
+    private val onClick: (CategoryEntity) -> Unit
 ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     inner class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,13 +24,18 @@ class CategoryAdapter(
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
-        holder.categoryText.text = category.name
-
-
+        holder.categoryText.text = category.name  // category.name should be accessible here
         holder.itemView.setOnClickListener {
-            onClick(category.name)
+            onClick(category)
         }
+
     }
 
     override fun getItemCount(): Int = categories.size
+
+    fun updateCategories(newList: List<CategoryEntity>) {
+        categories = newList
+        notifyDataSetChanged()
+    }
+
 }
