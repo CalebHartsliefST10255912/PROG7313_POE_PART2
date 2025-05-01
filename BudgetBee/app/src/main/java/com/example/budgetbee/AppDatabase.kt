@@ -7,9 +7,10 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [UserEntity::class], version = 3, exportSchema = false)
+@Database(entities = [UserEntity::class, CategoryEntity::class], version = 5, exportSchema = false)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun userDao(): UserDao
+    abstract fun categoryDao(): CategoryDao
 
     companion object{
         @Volatile private var INSTANCE: AppDatabase? = null
