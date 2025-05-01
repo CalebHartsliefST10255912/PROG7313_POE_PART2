@@ -1,43 +1,43 @@
 package com.example.budgetbee
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class GoalsActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
+    private lateinit var textMin: TextView
+    private lateinit var textMax: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_goals)
+        setContentView(R.layout.activity_goals)  // same file name, now view mode
 
         db = AppDatabase.getDatabase(this)
+        textMin = findViewById(R.id.textMinGoal)
+        textMax = findViewById(R.id.textMaxGoal)
 
-        val minGoal = findViewById<EditText>(R.id.editMinGoal)
-        val maxGoal = findViewById<EditText>(R.id.editMaxGoal)
-        val otherGoal = findViewById<EditText>(R.id.editOtherGoal)
-        val buttonSave = findViewById<Button>(R.id.buttonSaveGoal)
+        val buttonEdit = findViewById<Button>(R.id.buttonEditGoals)
+        buttonEdit.setOnClickListener {
+            startActivity(Intent(this, EditGoalsActivity::class.java))
+        }
 
-        buttonSave.setOnClickListener {
-            val min = minGoal.text.toString().toDoubleOrNull()
-            val max = maxGoal.text.toString().toDoubleOrNull()
-            val other = otherGoal.text.toString()
+        loadGoals()
+    }
 
-            if (min == null || max == null) {
-                Toast.makeText(this, "Enter valid min/max goals", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            CoroutineScope(Dispatchers.IO).launch {
-                db.goalsDao().insertGoal(GoalsEntity(minMonthlyGoal = min, maxMonthlyGoal = max, otherGoal = other))
-                runOnUiThread {
-                    Toast.makeText(this@GoalsActivity, "Goals saved!", Toast.LENGTH_SHORT).show()
-                    finish()
+    private fun loadGoals() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val goal = db.goalsDao().getGoal()
+            runOnUiThread {
+                if (goal != null) {
+                    textMin.text = "Min Goal: R ${goal.minMonthlyGoal}"
+                    textMax.text = "Max Goal: R ${goal.maxMonthlyGoal}"
+                } else {
+                    Toast.makeText(this@GoalsActivity, "No goals set yet.", Toast.LENGTH_SHORT).show()
                 }
             }
         }

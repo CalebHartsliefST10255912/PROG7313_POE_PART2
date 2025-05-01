@@ -5,7 +5,17 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_edit_goals.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_goals.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_help_center.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
@@ -41,22 +51,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_goals.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="updated goals code with no build errors">
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/EditGoalsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_edit_goals.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AppDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_goals.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_goals.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\vroop\.android\avd\Pixel_9_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\vroop\.android\avd\Pixel_8_Pro_API_35.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/BudgetBee">
       <ProjectState />
@@ -113,7 +114,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -220,6 +221,15 @@
       <option name="presentableId" value="Default" />
       <updated>1745831983573</updated>
     </task>
+    <task id="LOCAL-00001" summary="updated goals code with no build errors">
+      <option name="closed" value="true" />
+      <created>1746092351579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746092351579</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,17 +243,22 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge pull request #2 from CalebHartsliefST10255912/Login-And-Register&#10;&#10;Login and register" />
+    <MESSAGE value="updated goals code with no build errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated goals code with no build errors" />
+  </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.budgetbee">
           <value>
-            <CheckInfo lastCheckTimestamp="1746009899584" />
+            <CheckInfo lastCheckTimestamp="1746097544912" />
           </value>
         </entry>
         <entry key="com.example.budgetbee.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1746009899582" />
+            <CheckInfo lastCheckTimestamp="1746097544933" />
           </value>
         </entry>
       </map>
