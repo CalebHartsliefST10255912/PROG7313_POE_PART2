@@ -51,7 +51,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="separated code into 2 views and the code works and builds with no errors" />
+    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +62,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\vroop\.android\avd\Pixel_8_Pro_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\luke jordan\.android\avd\Pixel_9_API_24.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/BudgetBee">
       <ProjectState />
@@ -100,12 +102,12 @@
     &quot;assignee&quot;: &quot;ST10258101&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git&quot;,
-    &quot;accountId&quot;: &quot;1c5dfbf6-15f7-4266-9de1-1ba3e2158fd8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git",
+    "accountId": "f5ae79e1-9a8f-45b0-848a-3a1bf8279dab"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -126,7 +128,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "feature/goals",
+    "git-widget-placeholder": "feature/category-expense",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java",
     "last_opened_file_path": "C:/Users/luke jordan/Documents/GitHub/PROG7313_POE_PART2/BudgetBee"
@@ -230,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746104918623</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1746118429724</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746118429727</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +258,8 @@
     <MESSAGE value="Merge pull request #2 from CalebHartsliefST10255912/Login-And-Register&#10;&#10;Login and register" />
     <MESSAGE value="updated goals code with no build errors" />
     <MESSAGE value="separated code into 2 views and the code works and builds with no errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="separated code into 2 views and the code works and builds with no errors" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
