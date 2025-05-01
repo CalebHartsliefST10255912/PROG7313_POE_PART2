@@ -16,6 +16,6 @@
         android:icon="@drawable/category_api_24"
         android:id="@+id/Categories"/>
     <item android:title="Search"
-        android:icon="@drawable/baseline_castle_24"
+        android:icon=""
         android:id="@+id/search"/>
 </menu>
