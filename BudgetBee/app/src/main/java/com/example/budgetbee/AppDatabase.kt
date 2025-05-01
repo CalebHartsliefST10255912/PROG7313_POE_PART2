@@ -7,9 +7,12 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [UserEntity::class], version = 3, exportSchema = false)
+//@Database(entities = [UserEntity::class], version = 3, exportSchema = false)
+@Database(entities = [UserEntity::class, GoalsEntity::class], version = 4, exportSchema = false)
+
 abstract class AppDatabase : RoomDatabase(){
     abstract fun userDao(): UserDao
+    abstract fun goalsDao(): GoalsDao // added goals - vinay
 
     companion object{
         @Volatile private var INSTANCE: AppDatabase? = null
@@ -19,13 +22,9 @@ abstract class AppDatabase : RoomDatabase(){
                 database.execSQL(
                     """""
                         CREATE TABLE IF NOT EXISTS 'users'(
-                            'userName' TEXT NOT NULL,
+                            'username' TEXT NOT NULL,
                             'password' TEXT NOT NULL,
-                            'userEmail' TEXT NOT NULL,
-                            'userPhone' TEXT NOT NULL,
-                            'userDOB' TEXT NOT NULL,
-                            'userId' INT NOT NULL,
-                            PRIMARY KEY('userId')
+                            PRIMARY KEY('username')
                             )
                             """.trimIndent()
 
@@ -38,7 +37,7 @@ abstract class AppDatabase : RoomDatabase(){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "budgetbee_db"
+                    "budgetBee_database" //i fixed the spelling - vinay
                 )
                     .addMigrations(MIGRATION_1_2)
                     //There is and issue with the database where the userDate is saved as a Date in
