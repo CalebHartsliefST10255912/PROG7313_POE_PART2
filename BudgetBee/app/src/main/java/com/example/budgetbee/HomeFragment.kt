@@ -38,6 +38,11 @@ class HomeFragment : Fragment() {
         binding.buttonGoals.setOnClickListener {
              startActivity(Intent(requireContext(), GoalsActivity::class.java))
         }
+
+        binding.buttonGoToTransactions.setOnClickListener {
+            startActivity(Intent(requireContext(), AddExpenseActivity::class.java))
+        }
+
     }
 
     override fun onDestroyView() {

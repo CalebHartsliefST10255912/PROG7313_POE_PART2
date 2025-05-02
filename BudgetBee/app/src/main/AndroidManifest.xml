@@ -42,6 +42,8 @@
         <activity android:name=".CategoryDetailsActivity" android:exported="true" />
 
         <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".AddExpenseActivity" android:exported="true" />
+
 
 
     </application>

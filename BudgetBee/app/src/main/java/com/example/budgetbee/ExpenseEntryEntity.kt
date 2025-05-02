@@ -15,5 +15,6 @@ data class ExpenseEntryEntity(
     val endTime: String,
     val category: String,    // For display
     val description: String,
-    val location: String
+    val location: String,
+    val photoPath: String? = null // photo
 )
