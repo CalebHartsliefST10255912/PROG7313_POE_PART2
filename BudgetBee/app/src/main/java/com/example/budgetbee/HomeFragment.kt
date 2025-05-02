@@ -1,24 +1,15 @@
 package com.example.budgetbee
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import com.example.budgetbee.databinding.FragmentHomeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -27,46 +18,39 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        try {
+            val sharedPref = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+            val userName = sharedPref.getString("userName", "User") ?: "User"
+            binding.textWelcome.text = "Welcome, $userName"
+        } catch (e: Exception) {
+            Log.e("HomeFragment", "Error loading user name", e)
+            binding.textWelcome.text = "Welcome"
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonGoals.setOnClickListener {
-             startActivity(Intent(requireContext(), GoalsActivity::class.java))
-        }
+        try {
+            binding.buttonGoals.setOnClickListener {
+                startActivity(Intent(requireContext(), GoalsActivity::class.java))
+            }
 
-        binding.buttonGoToTransactions.setOnClickListener {
-            startActivity(Intent(requireContext(), AddExpenseActivity::class.java))
+            binding.buttonViewTransactions.setOnClickListener {
+                startActivity(Intent(requireContext(), AddExpenseActivity::class.java))
+            }
+        } catch (e: Exception) {
+            Log.e("HomeFragment", "Error setting button listeners", e)
         }
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
