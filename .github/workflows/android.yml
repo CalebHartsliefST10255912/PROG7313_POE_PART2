@@ -25,7 +25,7 @@ jobs:
         run: chmod +x BudgetBee/gradlew
 
       - name: Build Debug APK
-        run: BudgetBee/gradlew assembleDebug
+        run: BudgetBee/settings.gradle.kts assembleDebug
 
       - name: Run unit tests
         run: BudgetBee/settings.gradle.kts testDebugUnitTest
