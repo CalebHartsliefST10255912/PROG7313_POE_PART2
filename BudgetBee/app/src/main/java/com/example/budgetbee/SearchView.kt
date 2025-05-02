@@ -1,6 +1,6 @@
 package com.example.budgetbee
 
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.Flow

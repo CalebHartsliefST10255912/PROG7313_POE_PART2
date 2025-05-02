@@ -24,7 +24,8 @@ class SearchFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
-        searchView = view.findViewById(R.id.searchView)
+        val searchView = view.findViewById<androidx.appcompat.widget.SearchView>(R.id.searchView)
+        searchView.setIconified(false)
         recyclerView = view.findViewById(R.id.recyclerView)
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
