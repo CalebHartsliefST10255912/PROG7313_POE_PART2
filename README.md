@@ -6,9 +6,13 @@ This is our project for Part 2 of PROG7313. It's a budget tracker Android app. T
 
 
 Group Members
+
 •	Vinay Roopchun – st10258101
+
 •	Luke Jordan – st10258256
+
 •	Matthew Westermeyer – st10261338
+
 •	Caleb Hartslief – st10255912
 
 
