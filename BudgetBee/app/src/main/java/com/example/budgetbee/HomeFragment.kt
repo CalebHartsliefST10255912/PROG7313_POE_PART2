@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
         try {
             val sharedPref = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
             val userName = sharedPref.getString("userName", "User") ?: "User"
-            binding.textWelcome.text = "Welcome, $userName"
+            binding.textWelcome.text = "Welcome, ${userName}"
         } catch (e: Exception) {
             Log.e("HomeFragment", "Error loading user name", e)
             binding.textWelcome.text = "Welcome"
