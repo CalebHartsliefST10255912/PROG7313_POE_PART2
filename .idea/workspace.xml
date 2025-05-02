@@ -137,12 +137,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="separated code into 2 views and the code works and builds with no errors">
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/logo-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/logo_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/logo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/logo_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo_round.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,12 +214,22 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git&quot;,
-    &quot;accountId&quot;: &quot;5476b842-0d1d-4da0-bec4-177f3dadd993&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git",
+    "accountId": "5476b842-0d1d-4da0-bec4-177f3dadd993"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "CalebHartsliefST10255912",
+    "repository": "PROG7313_POE_PART2"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
