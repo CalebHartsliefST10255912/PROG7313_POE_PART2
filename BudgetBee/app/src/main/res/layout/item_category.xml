@@ -1,4 +1,3 @@
-<!--This is the item category image-->
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,7 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity ="center"
     android:padding="8dp">
-
+    <!--This is the item category image-->
     <ImageView
         android:id="@+id/categoryIcon"
         android:layout_width="60dp"

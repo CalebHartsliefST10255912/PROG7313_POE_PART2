@@ -1,4 +1,3 @@
-This is the register page
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,7 +6,7 @@ This is the register page
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="@color/bee_yellow">
-
+    <!--This is the register page-->
     <EditText
         android:id="@+id/editName"
         android:layout_width="0dp"

@@ -1,4 +1,3 @@
-<!--This is the image of an expense entry-->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_margin="8dp"
@@ -6,7 +5,7 @@
     android:layout_height="wrap_content"
     android:radius="12dp"
     android:elevation="4dp">
-
+    <!--This is the image of an expense entry-->
     <LinearLayout
         android:orientation="vertical"
         android:padding="16dp"
