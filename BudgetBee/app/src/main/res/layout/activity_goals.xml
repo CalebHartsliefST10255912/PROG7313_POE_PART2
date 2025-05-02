@@ -31,6 +31,36 @@
         android:textSize="20sp"
         android:layout_marginBottom="32dp" />
 
+    <!-- ✅ NEW: Total spent -->
+    <TextView
+        android:id="@+id/textSpent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Spent: R 0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- ✅ NEW: ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@android:color/holo_green_dark"
+        android:layout_marginBottom="8dp" />
+
+    <!-- ✅ NEW: Percent text -->
+    <TextView
+        android:id="@+id/textProgressPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0% of max goal used"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+
     <Button
         android:id="@+id/buttonEditGoals"
         android:layout_width="wrap_content"

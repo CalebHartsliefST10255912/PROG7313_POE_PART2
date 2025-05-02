@@ -2,11 +2,87 @@ package com.example.budgetbee
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.budgetbee.data.ExpenseDao
+import com.example.budgetbee.CategoryAdapter
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+
 
 class CategoryDetailsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+
+    private lateinit var expenseDao: ExpenseDao
+    private lateinit var adapter: ExpenseAdapter
+    private var categoryId: Int = -1
+    private var categoryName: String = ""
+    private lateinit var goalsDao: GoalsDao
+    private lateinit var db: AppDatabase
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_details)
+
+        db = AppDatabase.getDatabase(this)
+        expenseDao = db.expenseDao()
+        goalsDao = db.goalsDao()
+
+
+        categoryId = intent.getIntExtra("CATEGORY_ID", -1)
+        categoryName = intent.getStringExtra("CATEGORY_NAME") ?: "Category"
+
+        findViewById<TextView>(R.id.textCategoryTitle).text = categoryName
+
+        expenseDao = AppDatabase.getDatabase(this).expenseDao()
+        adapter = ExpenseAdapter()
+        findViewById<RecyclerView>(R.id.recyclerExpenses).adapter = adapter
+        findViewById<RecyclerView>(R.id.recyclerExpenses).layoutManager = LinearLayoutManager(this)
+
+        loadExpenses()
+    }
+
+    private fun loadExpenses() {
+        lifecycleScope.launch {
+            val expenses = withContext(Dispatchers.IO) {
+                expenseDao.getExpensesForCategory(categoryId)
+            }
+
+            adapter.submitList(expenses)
+
+            val totalExpense = expenses.sumOf { it.amount }
+
+
+            findViewById<TextView>(R.id.textTotalExpense).text =
+                "Total Spent: R %.2f".format(totalExpense)
+
+            val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
+            val userId = prefs.getInt("userId", -1)
+
+            val goal = withContext(Dispatchers.IO) {
+                db.goalsDao().getGoal(userId)
+            }
+
+            if (goal != null) {
+                val budget = goal.maxMonthlyGoal
+                val remaining = (budget - totalExpense).coerceAtLeast(0.0)
+                val percentage = ((totalExpense / budget) * 100).toInt().coerceAtMost(100)
+
+                findViewById<TextView>(R.id.textTotalBalance).text =
+                    "R %.2f".format(remaining)
+
+                findViewById<ProgressBar>(R.id.expenseProgress)?.progress = percentage
+                findViewById<TextView>(R.id.textProgressSummary)?.text =
+                    "$percentage% of your goal budget used."
+            } else {
+                findViewById<TextView>(R.id.textProgressSummary)?.text =
+                    "Set a goal to track your spending."
+            }
+        }
     }
 }

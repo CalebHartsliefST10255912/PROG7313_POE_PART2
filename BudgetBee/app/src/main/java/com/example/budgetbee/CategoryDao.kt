@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.budgetbee.data.ExpenseEntryEntity
 
 @Dao
 interface CategoryDao {
@@ -14,4 +15,7 @@ interface CategoryDao {
 
     @Query("SELECT * FROM categories WHERE userId = :userId")
     suspend fun getAll(userId: Int): List<CategoryEntity>
+
+    @Query("SELECT * FROM expenses WHERE categoryId = :categoryId ORDER BY date DESC")
+    suspend fun getExpensesByCategory(categoryId: Int): List<ExpenseEntryEntity>
 }
