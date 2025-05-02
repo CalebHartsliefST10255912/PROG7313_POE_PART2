@@ -60,6 +60,16 @@
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category_details.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_goals.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
@@ -86,13 +96,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="Added Category functionality Along with making goals give an amount for total goal amount, intention to add navbar functionality">
-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_goals.xml" afterDir="false" />
+    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="Goals Implementation">
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDetailsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category_details.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,9 +133,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -326,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746186692273</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Goals Implementation">
+      <option name="closed" value="true" />
+      <created>1746189228076</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746189228077</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,7 +365,8 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added Category functionality Along with making goals give an amount for total goal amount" />
     <MESSAGE value="Added Category functionality Along with making goals give an amount for total goal amount, intention to add navbar functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Category functionality Along with making goals give an amount for total goal amount, intention to add navbar functionality" />
+    <MESSAGE value="Goals Implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Goals Implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
