@@ -12,12 +12,18 @@ class GoalsActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
     private lateinit var textMin: TextView
     private lateinit var textMax: TextView
+    private var userId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_goals)  // same file name, now view mode
+        setContentView(R.layout.activity_goals)
+
+        // ✅ Get userId from SharedPreferences
+        val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        userId = prefs.getInt("userId", -1)
 
         db = AppDatabase.getDatabase(this)
+
         textMin = findViewById(R.id.textMinGoal)
         textMax = findViewById(R.id.textMaxGoal)
 
@@ -31,8 +37,8 @@ class GoalsActivity : AppCompatActivity() {
 
     private fun loadGoals() {
         CoroutineScope(Dispatchers.IO).launch {
-            val goal = db.goalsDao().getGoal()
-            runOnUiThread {
+            val goal = db.goalsDao().getGoal(userId)
+            withContext(Dispatchers.Main) {
                 if (goal != null) {
                     textMin.text = "Min Goal: R ${goal.minMonthlyGoal}"
                     textMax.text = "Max Goal: R ${goal.maxMonthlyGoal}"

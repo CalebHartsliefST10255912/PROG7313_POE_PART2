@@ -10,11 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.text.SimpleDateFormat
-import java.util.*
-import com.example.budgetbee.R.*
-import com.example.budgetbee.HomeActivity
-
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -34,14 +29,12 @@ class RegisterActivity : AppCompatActivity() {
         val editPassword = findViewById<EditText>(R.id.editPassword)
         val registerButton = findViewById<Button>(R.id.buttonRegister)
 
-        registerButton.setOnClickListener(){
+        registerButton.setOnClickListener {
             val userEmail = editEmail.text.toString()
             val password = editPassword.text.toString()
             val phone = editPhone.text.toString()
             val name = editName.text.toString()
             val userDOB = editDOB.text.toString()
-
-
 
             lifecycleScope.launch {
                 val existingUser = withContext(Dispatchers.IO) {
@@ -49,30 +42,25 @@ class RegisterActivity : AppCompatActivity() {
                 }
 
                 if (existingUser != null) {
-                    Toast.makeText(
-                        this@RegisterActivity,
-                        "User Email already exists",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this@RegisterActivity, "User Email already exists", Toast.LENGTH_SHORT).show()
                 } else {
-                    val newUser = UserEntity(userEmail = userEmail, password = password, userDOB = userDOB, userPhone = phone, userName = name )
+                    val newUser = UserEntity(userEmail = userEmail, password = password, userDOB = userDOB, userPhone = phone, userName = name)
+                    var insertedUserId = -1
                     withContext(Dispatchers.IO) {
-                        userDao.insertUser(newUser)
-
+                        insertedUserId = userDao.insertUser(newUser).toInt()
                     }
-                    Toast.makeText(
-                        this@RegisterActivity,
-                        "Registration successful!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+
+                    // ✅ Save userId to SharedPreferences
+                    val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
+                    prefs.edit().putInt("userId", insertedUserId).apply()
+
+                    Toast.makeText(this@RegisterActivity, "Registration successful!", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this@RegisterActivity, HomeActivity::class.java)
                     startActivity(intent)
-
-
+                    finish()
                 }
             }
         }
-
     }
 }

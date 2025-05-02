@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "goals")
 data class GoalsEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val userId: Int,
     val minMonthlyGoal: Double,
     val maxMonthlyGoal: Double,
-    val otherGoal: String = "",
- //   val isCompleted: Boolean = false  //
+    val otherGoal: String = ""
 )

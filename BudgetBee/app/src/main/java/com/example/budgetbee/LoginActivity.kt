@@ -18,7 +18,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var userDao: UserDao
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,19 +26,15 @@ class LoginActivity : AppCompatActivity() {
         val db = AppDatabase.getDatabase(this)
         userDao = db.userDao()
 
-        //Values for the UI components in activity_login
         val editUserEmail = findViewById<EditText>(R.id.editUsername)
         val editPassword = findViewById<EditText>(R.id.editPassword)
         val textForgotPassword = findViewById<TextView>(R.id.textForgotPassword)
         val buttonLogin = findViewById<Button>(R.id.buttonLogin)
 
-        //SetClickListner that will register when the loginbutton is pressed
-        buttonLogin.setOnClickListener(){
+        buttonLogin.setOnClickListener {
             val userEmail = editUserEmail.text.toString()
             val password = editPassword.text.toString()
 
-
-            //email = admin ; password = admin
             lifecycleScope.launch {
                 val user = withContext(Dispatchers.IO) {
                     userDao.getUserByUserEmail(userEmail)
@@ -48,31 +43,25 @@ class LoginActivity : AppCompatActivity() {
                 if (user == null) {
                     Toast.makeText(this@LoginActivity, "User not found", Toast.LENGTH_SHORT).show()
                 } else if (user.password == password) {
-                    Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT)
-                        .show()
+                    // ✅ Save userId to SharedPreferences
+                    val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
+                    prefs.edit().putInt("userId", user.userId).apply()
 
+                    Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT).show()
                     Log.d("LoginPassword", "Email: ${user.userEmail}, Phone: ${user.userPhone}, Password: ${user.password}")
-
 
                     val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
-
-
                 } else {
-                    Toast.makeText(this@LoginActivity, "Incorrect password", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(this@LoginActivity, "Incorrect password", Toast.LENGTH_SHORT).show()
                 }
             }
-
-
         }
 
-        textForgotPassword.setOnClickListener(){
+        textForgotPassword.setOnClickListener {
             val intent = Intent(this, ResetPasswordActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

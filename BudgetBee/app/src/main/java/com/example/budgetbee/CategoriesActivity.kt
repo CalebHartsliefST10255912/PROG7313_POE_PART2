@@ -1,9 +1,9 @@
 package com.example.budgetbee
 
-
-
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,46 +12,62 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-
 class CategoriesActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: CategoryAdapter
 
-    val db = AppDatabase.getDatabase(this)
-    val categoryDao = db.categoryDao()
+    private lateinit var db: AppDatabase
+    private lateinit var categoryDao: CategoryDao
+
+    private var userId: Int = -1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
 
+        // ✅ Get userId from SharedPreferences
+        val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        userId = prefs.getInt("userId", -1)
+
+        if (userId == -1) {
+            // User not logged in properly, redirect to login or handle error
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+            return
+        }
+
+        db = AppDatabase.getDatabase(this)
+        categoryDao = db.categoryDao()
+
         recyclerView = findViewById(R.id.categoryRecyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 3)
 
-
         lifecycleScope.launch {
-
             val existingCategories = withContext(Dispatchers.IO) {
-                AppDatabase.getDatabase(this@CategoriesActivity).categoryDao().getAll()
+                categoryDao.getAll(userId)
             }
 
             if (existingCategories.isEmpty()) {
                 val predefined = listOf(
-                    CategoryEntity(name = "Food", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Transport", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Medicine", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Groceries", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Rent", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Gifts", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Savings", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Entertainment", iconResId = R.drawable.blue_circle),
-                    CategoryEntity(name = "Add", iconResId = R.drawable.blue_circle)
+                    CategoryEntity(userId = userId, name = "Food", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Transport", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Medicine", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Groceries", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Rent", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Gifts", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Savings", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Entertainment", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Add", iconResId = R.drawable.blue_circle)
                 )
 
-
-                predefined.forEach { categoryDao.insert(it) }
-
+                withContext(Dispatchers.IO) {
+                    predefined.forEach { categoryDao.insert(it) }
+                }
             }
 
-            val savedCategories = categoryDao.getAll()
+            val savedCategories = withContext(Dispatchers.IO) {
+                categoryDao.getAll(userId)
+            }
 
             val (moreCategory, otherCategories) = savedCategories.partition { it.name == "Add" }
             val orderedCategories = otherCategories + moreCategory
@@ -66,26 +82,26 @@ class CategoriesActivity : AppCompatActivity() {
                 }
             }
 
-
-
             recyclerView.adapter = adapter
-
         }
-
     }
 
     private fun showAddCategoryDialog() {
-        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this)
         builder.setTitle("Add New Category")
 
-        val input = android.widget.EditText(this)
+        val input = EditText(this)
         input.hint = "Enter category name"
         builder.setView(input)
 
         builder.setPositiveButton("Add") { dialog, _ ->
             val categoryName = input.text.toString().trim()
             if (categoryName.isNotEmpty()) {
-                val newCategory = CategoryEntity(name = categoryName, iconResId = R.drawable.blue_circle)
+                val newCategory = CategoryEntity(
+                    userId = userId,
+                    name = categoryName,
+                    iconResId = R.drawable.blue_circle
+                )
 
                 lifecycleScope.launch {
                     withContext(Dispatchers.IO) {
@@ -98,14 +114,13 @@ class CategoriesActivity : AppCompatActivity() {
         }
 
         builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
-
         builder.show()
     }
 
     private fun refreshCategoryList() {
         lifecycleScope.launch {
             val updatedCategories = withContext(Dispatchers.IO) {
-                categoryDao.getAll()
+                categoryDao.getAll(userId)
             }
             adapter.updateCategories(updatedCategories)
         }
