@@ -18,7 +18,7 @@ Group Members
 
 GitHub Repo: https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git 
 
-Youtube link : 
+Youtube link : https://youtu.be/CFnyJDxPLpI?si=ViB8UskVg3Vgx-cm
 
 
 Covered Topics
@@ -54,3 +54,19 @@ How to Run It
 4.	Let Gradle do its thing
 5.	Build it
 6.	Run it on your emulator 
+
+
+Build test done 
+
+![image](https://github.com/user-attachments/assets/145ef831-f573-4241-b192-8610500423eb)
+
+
+ 
+Reference List 
+•	BoostMyTool (2022) Build Release APK in Android Studio | Build Release version of Android Application. https://www.youtube.com/watch?v=WPScAR_UPDE. 
+•	Foxandroid (2023) Bottom Navigation Bar - Android Studio | Fragments | Java | 2023. https://www.youtube.com/watch?v=jOFLmKMOcK0.
+•	GeeksforGeeks (2025) Android Image Picker From Gallery using ActivityResultContracts in Kotlin. https://www.geeksforgeeks.org/android-image-picker-from-gallery-using-activityresultcontracts-in-kotlin/. 
+•	Google. (n.d.) SharedPreferences. Available at: https://developer.android.com/reference/android/content/SharedPreferences (Accessed: 2 May 2025).
+•	Google. (n.d.) Save data in a local database using Room. Available at: https://developer.android.com/training/data-storage/room (Accessed: 2 May 2025).
+•	Google. (n.d.) View binding. Available at: https://developer.android.com/topic/libraries/view-binding (Accessed: 2 May 2025).
+•	Google. (n.d.) Fragment lifecycle. Available at: https://developer.android.com/guide/fragments/lifecycle (Accessed: 2 May 2025).
