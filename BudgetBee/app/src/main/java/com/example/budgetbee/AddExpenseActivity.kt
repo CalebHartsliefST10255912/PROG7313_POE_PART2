@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -22,29 +23,56 @@ class AddExpenseActivity : AppCompatActivity() {
     private val PICK_IMAGE_REQUEST = 1
     private var categoryId = -1
     private lateinit var categoryName: String
+    private lateinit var categoriesList: List<CategoryEntity> // List to hold categories
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_expense)
 
-
         db = AppDatabase.getDatabase(this)
 
-        // Get category from intent (optional)
-        categoryId = intent.getIntExtra("CATEGORY_ID", -1)
-        categoryName = intent.getStringExtra("CATEGORY_NAME") ?: "General"
+        // Get userId from shared preferences
+        val userId = getSharedPreferences("user_prefs", MODE_PRIVATE).getInt("userId", -1)
+        if (userId == -1) {
+            Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        val imageView = findViewById<ImageView>(R.id.imagePreview)
-        val pickImageBtn = findViewById<Button>(R.id.buttonPickImage)
-        pickImageBtn.setOnClickListener {
+        // Fetch categories from the database
+        lifecycleScope.launch {
+            categoriesList = withContext(Dispatchers.IO) {
+                db.categoryDao().getCategoriesForUser(userId)
+            }
+
+            // Populate the Spinner
+            val categoryNames = categoriesList.map { it.name } // Extract category names
+            val adapter = ArrayAdapter(this@AddExpenseActivity, android.R.layout.simple_spinner_item, categoryNames)
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            findViewById<Spinner>(R.id.categorySpinner).adapter = adapter
+
+            // Set the spinner item selected listener
+            findViewById<Spinner>(R.id.categorySpinner).onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                    categoryId = categoriesList[position].categoryId
+                    categoryName = categoriesList[position].name
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // Handle case where nothing is selected, if needed
+                }
+            }
+        }
+
+        // Image picker button
+        findViewById<Button>(R.id.buttonPickImage).setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, PICK_IMAGE_REQUEST)
         }
 
-        val addBtn = findViewById<Button>(R.id.buttonAddExpense)
-        addBtn.setOnClickListener {
+        // Add expense button
+        findViewById<Button>(R.id.buttonAddExpense).setOnClickListener {
             saveExpense()
         }
     }
@@ -96,3 +124,5 @@ class AddExpenseActivity : AppCompatActivity() {
         }
     }
 }
+
+

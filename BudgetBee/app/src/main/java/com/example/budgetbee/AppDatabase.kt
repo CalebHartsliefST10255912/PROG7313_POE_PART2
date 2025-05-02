@@ -5,7 +5,7 @@ import androidx.room.*
 import com.example.budgetbee.data.ExpenseEntryEntity
 import com.example.budgetbee.data.ExpenseDao
 
-@Database(entities = [UserEntity::class, GoalsEntity::class, CategoryEntity::class, ExpenseEntryEntity::class], version = 10, exportSchema = false)
+@Database(entities = [UserEntity::class, GoalsEntity::class, CategoryEntity::class, ExpenseEntryEntity::class], version = 11, exportSchema = false)
 
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
