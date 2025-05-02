@@ -28,10 +28,10 @@
         <!-- Login and Register Activities -->
         <activity android:name=".LoginActivity" android:exported="true"/>
         <activity android:name=".RegisterActivity" android:exported="true"/>
-        <activity android:name=".HomeActivity" android:exported="true"/>
+<!--        <activity android:name=".HomeActivity" android:exported="true"/>-->
 
         <!-- HomeActivity (after login success) -->
-        <activity android:name=".HomeActivity" android:exported="true"/>
+        <activity android:name=".MainActivity" android:exported="true"/>
 
     </application>
 </manifest>

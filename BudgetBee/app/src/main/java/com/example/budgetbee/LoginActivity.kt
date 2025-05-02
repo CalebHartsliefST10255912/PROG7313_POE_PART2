@@ -2,6 +2,7 @@ package com.example.budgetbee
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -12,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -50,7 +52,9 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT)
                         .show()
 
-                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    Log.d("LoginPassword", "Email: ${user.userEmail}, Phone: ${user.userPhone}, Password: ${user.password}")
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+
                     startActivity(intent)
                     finish()
 

@@ -13,7 +13,7 @@ import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
 import com.example.budgetbee.R.*
-import com.example.budgetbee.HomeActivity
+//import com.example.budgetbee.HomeActivity
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -66,7 +66,7 @@ class RegisterActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    val intent = Intent(this@RegisterActivity, HomeActivity::class.java)
+                    val intent = Intent(this@RegisterActivity, MainActivity::class.java)
                     startActivity(intent)
 
 
