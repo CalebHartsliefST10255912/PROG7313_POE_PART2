@@ -28,7 +28,7 @@ jobs:
         run: BudgetBee/gradlew assembleDebug
 
       - name: Run unit tests
-        run: BudgetBee/gradlew testDebugUnitTest
+        run: BudgetBee/settings.gradle.kts testDebugUnitTest
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
