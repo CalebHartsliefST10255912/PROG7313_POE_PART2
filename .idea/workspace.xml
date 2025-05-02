@@ -123,14 +123,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="separated code into 2 views and the code works and builds with no errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/GoalsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ProfileFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +175,13 @@
     &quot;assignee&quot;: &quot;ST10258101&quot;
   }
 }</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git&quot;,
@@ -208,7 +209,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "test/db-merge",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java",
     "last_opened_file_path": "C:/Users/luke jordan/Documents/Varsity College/2025/PROG7313_POE_PART2/BudgetBee/app/src/main/res/drawable"
