@@ -25,7 +25,7 @@ class CategoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_category)
 
-        // ✅ Get userId from SharedPreferences
+        //Retrieve the logged in user's ID from shared preferences
         val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
         userId = prefs.getInt("userId", -1)
 
@@ -36,17 +36,20 @@ class CategoriesActivity : AppCompatActivity() {
             return
         }
 
+        //Initialoze the Room database and DAO
         db = AppDatabase.getDatabase(this)
         categoryDao = db.categoryDao()
 
         recyclerView = findViewById(R.id.categoryRecyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 3)
 
+        //Loads data
         lifecycleScope.launch {
             val existingCategories = withContext(Dispatchers.IO) {
                 categoryDao.getAll(userId)
             }
 
+            //If no Categories exist, this will insert values
             if (existingCategories.isEmpty()) {
                 val predefined = listOf(
                     CategoryEntity(userId = userId, name = "Food", iconResId = R.drawable.blue_circle),
@@ -60,11 +63,13 @@ class CategoriesActivity : AppCompatActivity() {
                     CategoryEntity(userId = userId, name = "Add", iconResId = R.drawable.blue_circle)
                 )
 
+                //Inserts the categoires
                 withContext(Dispatchers.IO) {
                     predefined.forEach { categoryDao.insert(it) }
                 }
             }
 
+            //Will fetch an updated list of categories
             val savedCategories = withContext(Dispatchers.IO) {
                 categoryDao.getAll(userId)
             }
@@ -88,6 +93,7 @@ class CategoriesActivity : AppCompatActivity() {
         }
     }
 
+    //Displays a dialog allowing the user to be able to input and add a new category
     private fun showAddCategoryDialog() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Add New Category")
@@ -115,10 +121,12 @@ class CategoriesActivity : AppCompatActivity() {
             dialog.dismiss()
         }
 
+        //Cancel button to cancel adding
         builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
         builder.show()
     }
 
+    //Refreshes the view so the updates will show
     private fun refreshCategoryList() {
         lifecycleScope.launch {
             val updatedCategories = withContext(Dispatchers.IO) {

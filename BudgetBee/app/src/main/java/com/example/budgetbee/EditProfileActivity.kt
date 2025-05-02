@@ -10,9 +10,10 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
+//This page will let the user edit their profile
 class EditProfileActivity : AppCompatActivity() {
 
+    //intializing the code for accessing queries for the database
     private lateinit var userDao: UserDao
     private lateinit var editName: EditText
     private lateinit var editEmail: EditText

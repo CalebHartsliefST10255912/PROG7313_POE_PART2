@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
+//This is the profile fragment used for when accessing the nav bar
 class ProfileFragment : Fragment() {
 
     private lateinit var userDao: UserDao

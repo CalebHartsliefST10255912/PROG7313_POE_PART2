@@ -7,29 +7,32 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.*
-
+//This page will alow the user to edit their goals
 class EditGoalsActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
     private lateinit var editMin: EditText
     private lateinit var editMax: EditText
     private var userId: Int = -1
 
+    //Show the edit goals activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_goals)
 
         db = AppDatabase.getDatabase(this)
 
-        // ✅ Get userId from SharedPreferences
+        //Shared prefrences
         val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
         userId = prefs.getInt("userId", -1)
 
+        //Will make sure that the user will be able to see their own data other
         if (userId == -1) {
             Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
 
+        //Will retrieve what the user input
         editMin = findViewById(R.id.editMinGoal)
         editMax = findViewById(R.id.editMaxGoal)
         val saveBtn = findViewById<Button>(R.id.buttonSaveGoal)
@@ -69,6 +72,7 @@ class EditGoalsActivity : AppCompatActivity() {
         }
     }
 
+    //Will load the goals
     private fun loadGoals() {
         CoroutineScope(Dispatchers.IO).launch {
             val goal = db.goalsDao().getGoal(userId)

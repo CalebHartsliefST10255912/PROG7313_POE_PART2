@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import android.util.Log
 
-
+//This is the reset password class and will manage how the user will reset their passwords
 class ResetPasswordActivity : AppCompatActivity() {
 
     private lateinit var db: AppDatabase

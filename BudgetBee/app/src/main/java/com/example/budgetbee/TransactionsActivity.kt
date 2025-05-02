@@ -11,7 +11,7 @@ import com.example.budgetbee.data.ExpenseEntryEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
+//This is the Transaction activity
 class TransactionActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView

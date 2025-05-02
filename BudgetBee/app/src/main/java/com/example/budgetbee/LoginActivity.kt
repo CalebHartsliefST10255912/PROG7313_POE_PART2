@@ -14,7 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-
+//This handles the logining in of the user
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var userDao: UserDao

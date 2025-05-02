@@ -9,7 +9,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.budgetbee.databinding.FragmentHomeBinding
+//The home fragment manages the nav bar
+/*
+*
+* Android Developers. (n.d.). View Binding. [online] Available at: https://developer.android.com/topic/libraries/view-binding.
 
+‌
+*
+* used this to help with fragments
+* */
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null

@@ -3,7 +3,7 @@ package com.example.budgetbee
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-
+//This is the model for the categories table
 @Entity(
     tableName = "categories",
     indices = [Index(value = ["name", "userId"], unique = true)]

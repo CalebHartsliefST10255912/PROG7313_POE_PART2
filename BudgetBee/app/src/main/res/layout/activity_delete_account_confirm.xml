@@ -1,3 +1,4 @@
+<!--This will show the user the ablity to delete their account-->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"

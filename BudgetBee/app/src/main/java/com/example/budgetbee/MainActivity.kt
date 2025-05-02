@@ -10,10 +10,17 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.budgetbee.databinding.ActivityMainBinding
+/*
+* Code Attribution
+* Foxandroid (2023). Bottom Navigation Bar - Android Studio | Fragments | Java | 2023. [online] www.youtube.com. Available at: https://www.youtube.com/watch?v=jOFLmKMOcK0.
+
+‌
+*
+* Used this to help create the nav bar
+* */
 
 
-
-
+//This activiity will manage the nav bar as it is the main activity
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

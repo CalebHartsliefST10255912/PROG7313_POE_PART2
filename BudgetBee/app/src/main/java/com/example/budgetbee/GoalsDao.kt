@@ -1,7 +1,7 @@
 package com.example.budgetbee
 
 import androidx.room.*
-
+//Will allow the program to use queries to access information on the database for goals
 @Dao
 interface GoalsDao {
 

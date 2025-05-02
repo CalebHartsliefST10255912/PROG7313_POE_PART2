@@ -27,6 +27,7 @@ class CategoryDetailsActivity : AppCompatActivity() {
     private lateinit var goalsDao: GoalsDao
     private lateinit var db: AppDatabase
 
+    //Displays the activity category details page
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_details)
