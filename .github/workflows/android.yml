@@ -25,10 +25,10 @@ jobs:
         run: chmod +x BudgetBee/gradlew
 
       - name: Build Debug APK
-        run: BudgetBee/app assembleDebug
+        run: BudgetBee/gradlew assembleDebug
 
       - name: Run unit tests
-        run: BudgetBee/app testDebugUnitTest
+        run: BudgetBee/gradlew testDebugUnitTest
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
