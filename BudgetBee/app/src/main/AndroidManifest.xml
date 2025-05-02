@@ -46,5 +46,6 @@
 
         <activity android:name=".TransactionActivity" android:exported="true" />
 
+        <activity android:name=".EditProfileActivity" />
     </application>
 </manifest>

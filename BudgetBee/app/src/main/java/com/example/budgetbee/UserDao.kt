@@ -20,7 +20,11 @@ interface UserDao{
     @Update
     fun updateUser(user: UserEntity)
 
+
     @Query("SELECT * FROM users")
     fun getAllUsers(): List<UserEntity>
+    @Query("UPDATE users SET userName = :newName, userEmail = :newEmail, userPhone = :newPhone WHERE userEmail = :currentUserEmail")
+    suspend fun updateUserInfo(currentUserEmail: String, newName: String, newEmail: String, newPhone: String)
+
 
 }
