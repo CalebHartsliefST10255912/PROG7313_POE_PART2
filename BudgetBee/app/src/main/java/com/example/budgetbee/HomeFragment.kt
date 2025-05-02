@@ -40,9 +40,8 @@ class HomeFragment : Fragment() {
             binding.buttonGoals.setOnClickListener {
                 startActivity(Intent(requireContext(), GoalsActivity::class.java))
             }
-
-            binding.buttonViewTransactions.setOnClickListener {
-                startActivity(Intent(requireContext(), AddExpenseActivity::class.java))
+            binding.buttonTAC.setOnClickListener {
+                startActivity(Intent(requireContext(), TermsConditionsActivity::class.java))
             }
         } catch (e: Exception) {
             Log.e("HomeFragment", "Error setting button listeners", e)
