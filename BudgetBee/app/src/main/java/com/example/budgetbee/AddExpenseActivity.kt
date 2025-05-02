@@ -16,11 +16,29 @@ import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
 
+/*
+*
+* GeeksforGeeks. (2023). Android - Image Picker From Gallery using ActivityResultContracts in Kotlin. [online] Available at: https://www.geeksforgeeks.org/android-image-picker-from-gallery-using-activityresultcontracts-in-kotlin/.
+
+‌
+*
+* Used this for helping understand how to pick images
+*
+*
+* Android Developers. (2019). SharedPreferences  |  Android Developers. [online] Available at: https://developer.android.com/reference/android/content/SharedPreferences.
+
+‌
+*
+* Used this to help make sure the user data is linked to their data
+*
+* */
+
+
 class AddExpenseActivity : AppCompatActivity() {
 
     private lateinit var db: AppDatabase
     private var imageUri: Uri? = null
-    private val PICK_IMAGE_REQUEST = 1
+    private val PICK_IMAGE_REQUEST = 1  //Requests code for image selection
     private var categoryId = -1
     private lateinit var categoryName: String
     private lateinit var categoriesList: List<CategoryEntity> // List to hold categories
@@ -30,6 +48,7 @@ class AddExpenseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_expense)
 
+        //Initialize Room database instance
         db = AppDatabase.getDatabase(this)
 
         // Get userId from shared preferences
@@ -59,7 +78,7 @@ class AddExpenseActivity : AppCompatActivity() {
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
-                    // Handle case where nothing is selected, if needed
+
                 }
             }
         }
@@ -85,6 +104,7 @@ class AddExpenseActivity : AppCompatActivity() {
         }
     }
 
+    //Save expense entry to Room DB
     private fun saveExpense() {
         val name = findViewById<EditText>(R.id.inputExpenseName).text.toString()
         val amount = findViewById<EditText>(R.id.inputExpenseAmount).text.toString().toDoubleOrNull() ?: 0.0
@@ -101,6 +121,7 @@ class AddExpenseActivity : AppCompatActivity() {
             return
         }
 
+        //Create expense entity
         val expense = ExpenseEntryEntity(
             userId = userId,
             categoryId = categoryId,
@@ -115,6 +136,7 @@ class AddExpenseActivity : AppCompatActivity() {
             photoPath = imageUri?.toString()
         )
 
+        //Insert expense into DB
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
                 db.expenseDao().insertExpense(expense)

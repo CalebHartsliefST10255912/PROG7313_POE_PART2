@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.*
-
+//This is the goals activity, will manage what display for the goals will look like
 class GoalsActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
     private lateinit var textMin: TextView
@@ -19,7 +19,7 @@ class GoalsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_goals)
 
-        // ✅ Get userId from SharedPreferences
+
         val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
         userId = prefs.getInt("userId", -1)
 
@@ -36,6 +36,7 @@ class GoalsActivity : AppCompatActivity() {
         loadGoals()
     }
 
+    //Will load the current users goals information
     private fun loadGoals() {
         CoroutineScope(Dispatchers.IO).launch {
             val goal = db.goalsDao().getGoal(userId)

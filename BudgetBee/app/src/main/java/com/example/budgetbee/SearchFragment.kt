@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.budgetbee.data.ExpenseEntryEntity
 import kotlinx.coroutines.*
 import java.time.LocalDate
-
+///This is the search fragment and is based in the nav bar and will give the search info
 class SearchFragment : Fragment() {
 
     private lateinit var categorySpinner: Spinner

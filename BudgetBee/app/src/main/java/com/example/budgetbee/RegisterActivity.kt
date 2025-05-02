@@ -11,6 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+//This is the register class, It will register new users
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var userDao: UserDao
@@ -50,7 +51,6 @@ class RegisterActivity : AppCompatActivity() {
                         insertedUserId = userDao.insertUser(newUser).toInt()
                     }
 
-                    // ✅ Save userId to SharedPreferences
                     val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
                     prefs.edit().putInt("userId", insertedUserId).apply()
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CategoryDetailsActivity">
-
+    <!--This is the more detailed view of the catergories that will show expenses that are related to categories-->
 
     <TextView
         android:id="@+id/textCategoryTitle"

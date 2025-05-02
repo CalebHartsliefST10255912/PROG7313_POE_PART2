@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp">
-
+    <!--This will show the user a warning when deleting their account-->
     <TextView
         android:id="@+id/textDeleteWarning"
         android:layout_width="wrap_content"

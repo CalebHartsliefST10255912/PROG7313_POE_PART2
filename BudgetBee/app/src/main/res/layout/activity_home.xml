@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-
+    <!--This is the home page allowing the user access to add an expense and goals-->
     <TextView
         android:id="@+id/textWelcomeHome"
         android:layout_width="wrap_content"

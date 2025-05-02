@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.budgetbee.data.ExpenseEntryEntity
 
+//These are just sql quesries that will interact with the database
 @Dao
 interface CategoryDao {
 

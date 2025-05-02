@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="@color/bee_yellow">
-
+    <!--This is the register page-->
     <EditText
         android:id="@+id/editName"
         android:layout_width="0dp"

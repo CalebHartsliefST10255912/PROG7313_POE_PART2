@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-
+//This allows the program to do queries for the user
 @Dao
 interface UserDao{
     @Insert

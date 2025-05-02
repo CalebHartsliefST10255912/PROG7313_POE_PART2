@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:radius="12dp"
     android:elevation="4dp">
-
+    <!--This is the image of an expense entry-->
     <LinearLayout
         android:orientation="vertical"
         android:padding="16dp"

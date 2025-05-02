@@ -2,7 +2,7 @@ package com.example.budgetbee.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-
+//This is the expense model
 @Entity(tableName = "expenses")
 data class ExpenseEntryEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,

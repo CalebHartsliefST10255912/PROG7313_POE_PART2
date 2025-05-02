@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
+//This is the simple item adapter
 class SimpleItemAdapter : RecyclerView.Adapter<SimpleItemAdapter.ViewHolder>() {
 
     private var items: List<String> = emptyList()
@@ -28,7 +28,7 @@ class SimpleItemAdapter : RecyclerView.Adapter<SimpleItemAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.textItem.text = item
-        holder.textItem.contentDescription = "Item: $item" // 👈 Accessibility fix
+        holder.textItem.contentDescription = "Item: $item"
     }
 
 

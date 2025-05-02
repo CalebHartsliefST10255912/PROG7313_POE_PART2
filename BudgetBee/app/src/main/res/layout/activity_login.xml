@@ -8,6 +8,8 @@
     android:background="@color/bee_yellow"
     android:gravity="center_horizontal">
 
+    <!--This is the login page-->
+
     <TextView
         android:id="@+id/textWelcome"
         android:layout_width="wrap_content"

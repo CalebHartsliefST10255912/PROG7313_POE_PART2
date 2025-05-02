@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity ="center"
     android:padding="8dp">
-
+    <!--This is the item category image-->
     <ImageView
         android:id="@+id/categoryIcon"
         android:layout_width="60dp"
