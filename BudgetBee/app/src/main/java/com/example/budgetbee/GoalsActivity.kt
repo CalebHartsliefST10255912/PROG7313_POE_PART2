@@ -39,35 +39,33 @@ class GoalsActivity : AppCompatActivity() {
     private fun loadGoals() {
         CoroutineScope(Dispatchers.IO).launch {
             val goal = db.goalsDao().getGoal(userId)
-            val expenses = db.expenseDao().getAllExpensesForUser(userId) // You’ll need to implement this
 
-            val totalSpent = expenses.sumOf { it.amount }
-
-            val textProgressPercent = findViewById<TextView>(R.id.textProgressPercent)
-            val progressBar = findViewById<ProgressBar>(R.id.progressBar)
-
-            val percentOfMax = ((totalSpent / goal!!.maxMonthlyGoal) * 100).toInt().coerceAtMost(100)
-
-            progressBar.progress = percentOfMax
-            textProgressPercent.text = "$percentOfMax% of max goal used"
-
-
-            withContext(Dispatchers.Main) {
-                if (goal != null) {
-                    textMin.text = "Min Goal: R ${goal.minMonthlyGoal}"
-                    textMax.text = "Max Goal: R ${goal.maxMonthlyGoal}"
-
-                    findViewById<TextView>(R.id.textSpent).text =
-                        "Total Spent: R %.2f".format(totalSpent)
-
-                    // Optional: visual progress
-                    val percentOfMax = ((totalSpent / goal.maxMonthlyGoal) * 100).toInt()
-                    findViewById<ProgressBar>(R.id.progressBar).progress = percentOfMax
-                } else {
+            if (goal == null) {
+                withContext(Dispatchers.Main) {
                     Toast.makeText(this@GoalsActivity, "No goals set yet.", Toast.LENGTH_SHORT).show()
                 }
+                return@launch
+            }
+
+            val expenses = db.expenseDao().getAllExpensesForUser(userId)
+            val totalSpent = expenses.sumOf { it.amount }
+
+            val percentOfMax = ((totalSpent / goal.maxMonthlyGoal) * 100).toInt().coerceAtMost(100)
+
+            withContext(Dispatchers.Main) {
+                textMin.text = "Min Goal: R ${goal.minMonthlyGoal}"
+                textMax.text = "Max Goal: R ${goal.maxMonthlyGoal}"
+
+                findViewById<TextView>(R.id.textSpent).text =
+                    "Total Spent: R %.2f".format(totalSpent)
+
+                findViewById<TextView>(R.id.textProgressPercent).text =
+                    "$percentOfMax% of max goal used"
+
+                findViewById<ProgressBar>(R.id.progressBar).progress = percentOfMax
             }
         }
     }
+
 
 }

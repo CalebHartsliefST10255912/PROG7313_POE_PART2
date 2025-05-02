@@ -16,7 +16,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -37,14 +36,16 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true // Enable desugaring here
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
 dependencies {
-
+    // Your existing dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -57,10 +58,12 @@ dependencies {
 
     //For Room DB
     val room_version = "2.6.1"
-
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:$room_version")
 
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
+    // Add the core library desugaring dependency here
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }
