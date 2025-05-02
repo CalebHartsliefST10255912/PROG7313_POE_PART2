@@ -1,5 +1,6 @@
 package com.example.budgetbee
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,7 +36,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonGoals.setOnClickListener {
-            // startActivity(Intent(requireContext(), GoalsActivity::class.java))
+             startActivity(Intent(requireContext(), GoalsActivity::class.java))
         }
     }
 

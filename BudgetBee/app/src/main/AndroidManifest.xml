@@ -41,6 +41,8 @@
         <activity android:name=".CategoriesActivity" android:exported="true" />
         <activity android:name=".CategoryDetailsActivity" android:exported="true" />
 
+        <activity android:name=".MainActivity" android:exported="true" />
+
 
     </application>
 </manifest>

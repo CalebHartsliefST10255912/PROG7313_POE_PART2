@@ -23,7 +23,7 @@ class CategoriesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_categories)
+        setContentView(R.layout.fragment_category)
 
         // ✅ Get userId from SharedPreferences
         val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
