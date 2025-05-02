@@ -57,7 +57,9 @@ class CategoriesActivity : AppCompatActivity() {
                     CategoryEntity(userId = userId, name = "Gifts", iconResId = R.drawable.blue_circle),
                     CategoryEntity(userId = userId, name = "Savings", iconResId = R.drawable.blue_circle),
                     CategoryEntity(userId = userId, name = "Entertainment", iconResId = R.drawable.blue_circle),
+                    CategoryEntity(userId = userId, name = "Income", iconResId = R.drawable.blue_circle),
                     CategoryEntity(userId = userId, name = "Add", iconResId = R.drawable.blue_circle)
+
                 )
 
                 withContext(Dispatchers.IO) {
