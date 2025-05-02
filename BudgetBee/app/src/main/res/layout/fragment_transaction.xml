@@ -1,15 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/bee_yellow"
+    android:padding="24dp">
 
-    <!-- Other views in the fragment -->
-
-    <!-- Button to open TransactionActivity -->
-    <Button
-        android:id="@+id/buttonViewTransactions"
+    <TextView
+        android:id="@+id/textTransactionHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Transactions" />
+        android:text="Transactions"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/buttonAddExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonViewTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Transactions"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white" />
 </LinearLayout>

@@ -2,12 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+
     <!--This will show the user the ability to edit their goals-->
+    android:padding="24dp"
+    android:background="@color/bee_yellow">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -15,37 +18,49 @@
             android:text="Edit Monthly Spending Goals"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="24dp"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/editMinGoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
             android:hint="Minimum Goal (e.g. 1500)"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:minHeight="56dp"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/editMaxGoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
             android:hint="Maximum Goal (e.g. 4000)"
-            android:layout_marginTop="16dp"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:minHeight="56dp"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
 
         <Button
             android:id="@+id/buttonSaveGoal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Save"
-            android:layout_marginTop="24dp" />
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/black"/>
 
         <Button
             android:id="@+id/buttonBack"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Back"
-            android:layout_marginTop="8dp" />
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </ScrollView>
