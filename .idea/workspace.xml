@@ -55,6 +55,11 @@
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_voucher.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
@@ -90,6 +95,11 @@
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_transaction.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_category.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
@@ -106,13 +116,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="Can Add Expense">
+    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="Can Add Expense with category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AppDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDetailsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_add_expense.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_add_expense.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_transaction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_expense.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_expense.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +198,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Android App.BudgetBee.app.executor": "Debug",
+    "Android App.BudgetBee.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -370,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746202504113</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Can Add Expense with category">
+      <option name="closed" value="true" />
+      <created>1746204173914</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746204173916</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,7 +418,8 @@
     <MESSAGE value="Goals Implementation" />
     <MESSAGE value="I Tried my best, nav bar on most functions, but not in depth on goal or CategoryDetailsFragment.kt" />
     <MESSAGE value="Can Add Expense" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can Add Expense" />
+    <MESSAGE value="Can Add Expense with category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can Add Expense with category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

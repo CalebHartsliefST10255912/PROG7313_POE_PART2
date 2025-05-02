@@ -3,6 +3,7 @@ package com.example.budgetbee
 import ExpenseAdapter
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -34,13 +35,14 @@ class CategoryDetailsActivity : AppCompatActivity() {
         expenseDao = db.expenseDao()
         goalsDao = db.goalsDao()
 
-
         categoryId = intent.getIntExtra("CATEGORY_ID", -1)
         categoryName = intent.getStringExtra("CATEGORY_NAME") ?: "Category"
 
+
+        // Set the category name as title
         findViewById<TextView>(R.id.textCategoryTitle).text = categoryName
 
-        expenseDao = AppDatabase.getDatabase(this).expenseDao()
+        // Setup RecyclerView and Adapter for displaying expenses
         adapter = ExpenseAdapter()
         findViewById<RecyclerView>(R.id.recyclerExpenses).adapter = adapter
         findViewById<RecyclerView>(R.id.recyclerExpenses).layoutManager = LinearLayoutManager(this)
@@ -50,15 +52,22 @@ class CategoryDetailsActivity : AppCompatActivity() {
 
     private fun loadExpenses() {
         lifecycleScope.launch {
+            // Fetch expenses for the selected category
             val expenses = withContext(Dispatchers.IO) {
                 expenseDao.getExpensesForCategory(categoryId)
             }
 
+            if (expenses.isEmpty()) {
+                Log.d("CategoryDetails", "No expenses found for this category.")
+            }
+
+            // Submit the list to the adapter
             adapter.submitList(expenses)
 
+            // Calculate the total expenses
             val totalExpense = expenses.sumOf { it.amount }
 
-
+            // Update the total expenses UI
             findViewById<TextView>(R.id.textTotalExpense).text =
                 "Total Spent: R %.2f".format(totalExpense)
 
@@ -69,6 +78,7 @@ class CategoryDetailsActivity : AppCompatActivity() {
                 db.goalsDao().getGoal(userId)
             }
 
+            // Update the remaining balance and progress bar
             if (goal != null) {
                 val budget = goal.maxMonthlyGoal
                 val remaining = (budget - totalExpense).coerceAtLeast(0.0)

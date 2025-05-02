@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.budgetbee.databinding.ActivityMainBinding
 
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

@@ -77,8 +77,10 @@ class CategoriesActivity : AppCompatActivity() {
                     showAddCategoryDialog()
                 } else {
                     val intent = Intent(this@CategoriesActivity, CategoryDetailsActivity::class.java)
+                    intent.putExtra("CATEGORY_ID", selectedCategory.categoryId)
                     intent.putExtra("CATEGORY_NAME", selectedCategory.name)
                     startActivity(intent)
+
                 }
             }
 
