@@ -1,0 +1,492 @@
+Index: BudgetBee/app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">BudgetBee</string>\r\n    <!-- TODO: Remove or change this placeholder text -->\r\n    <string name=\"hello_blank_fragment\">Hello blank fragment</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BudgetBee/app/src/main/res/values/strings.xml b/BudgetBee/app/src/main/res/values/strings.xml
+--- a/BudgetBee/app/src/main/res/values/strings.xml	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/BudgetBee/app/src/main/res/values/strings.xml	(date 1746196696111)
+@@ -2,4 +2,6 @@
+     <string name="app_name">BudgetBee</string>
+     <!-- TODO: Remove or change this placeholder text -->
+     <string name="hello_blank_fragment">Hello blank fragment</string>
++    <string name="select_category">Select a category</string>
++    <string name="select_date_range">Select a date range</string>
+ </resources>
+\ No newline at end of file
+Index: BudgetBee/app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    alias(libs.plugins.android.application)\r\n    alias(libs.plugins.kotlin.android)\r\n\r\n    //For RoomDB\r\n    id(\"org.jetbrains.kotlin.kapt\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.budgetbee\"\r\n    compileSdk = 35\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.budgetbee\"\r\n        minSdk = 24\r\n        targetSdk = 35\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n\r\n    buildFeatures {\r\n        viewBinding = true\r\n    }\r\n\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_11\r\n        targetCompatibility = JavaVersion.VERSION_11\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"11\"\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation(libs.androidx.core.ktx)\r\n    implementation(libs.androidx.appcompat)\r\n    implementation(libs.material)\r\n    implementation(libs.androidx.activity)\r\n    implementation(libs.androidx.constraintlayout)\r\n    implementation(\"com.google.android.material:material:1.12.0\")\r\n    testImplementation(libs.junit)\r\n    androidTestImplementation(libs.androidx.junit)\r\n    androidTestImplementation(libs.androidx.espresso.core)\r\n\r\n    //For Room DB\r\n    val room_version = \"2.6.1\"\r\n\r\n    implementation(\"androidx.room:room-runtime:$room_version\")\r\n    kapt(\"androidx.room:room-compiler:2.6.1\")\r\n    implementation(\"androidx.room:room-ktx:$room_version\")\r\n\r\n    implementation(\"androidx.lifecycle:lifecycle-runtime-ktx:2.6.2\")\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BudgetBee/app/build.gradle.kts b/BudgetBee/app/build.gradle.kts
+--- a/BudgetBee/app/build.gradle.kts	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/BudgetBee/app/build.gradle.kts	(date 1746197719205)
+@@ -16,7 +16,6 @@
+         targetSdk = 35
+         versionCode = 1
+         versionName = "1.0"
+-
+         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+     }
+ 
+@@ -37,14 +36,16 @@
+     compileOptions {
+         sourceCompatibility = JavaVersion.VERSION_11
+         targetCompatibility = JavaVersion.VERSION_11
++        isCoreLibraryDesugaringEnabled = true // Enable desugaring here
+     }
++
+     kotlinOptions {
+         jvmTarget = "11"
+     }
+ }
+ 
+ dependencies {
+-
++    // Your existing dependencies
+     implementation(libs.androidx.core.ktx)
+     implementation(libs.androidx.appcompat)
+     implementation(libs.material)
+@@ -57,10 +58,12 @@
+ 
+     //For Room DB
+     val room_version = "2.6.1"
+-
+     implementation("androidx.room:room-runtime:$room_version")
+     kapt("androidx.room:room-compiler:2.6.1")
+     implementation("androidx.room:room-ktx:$room_version")
+ 
+     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+-}
+\ No newline at end of file
++
++    // Add the core library desugaring dependency here
++    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
++}
+Index: BudgetBee/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nplugins {\r\n    alias(libs.plugins.android.application) apply false\r\n    alias(libs.plugins.kotlin.android) apply false\r\n\r\n    //For RoomDB\r\n    alias(libs.plugins.kapt) apply false\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BudgetBee/build.gradle.kts b/BudgetBee/build.gradle.kts
+--- a/BudgetBee/build.gradle.kts	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/BudgetBee/build.gradle.kts	(date 1746197640186)
+@@ -5,4 +5,5 @@
+ 
+     //For RoomDB
+     alias(libs.plugins.kapt) apply false
+-}
+\ No newline at end of file
++}
++
+Index: BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.budgetbee\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.SearchView\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.lifecycle.lifecycleScope\r\nimport androidx.recyclerview.widget.LinearLayoutManager\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport kotlinx.coroutines.flow.*\r\nimport kotlinx.coroutines.launch\r\n\r\nclass SearchFragment : Fragment() {\r\n\r\n    private lateinit var searchView: SearchView\r\n    private lateinit var recyclerView: RecyclerView\r\n    private lateinit var adapter: SimpleItemAdapter\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n        val view = inflater.inflate(R.layout.fragment_search, container, false)\r\n\r\n        val searchView = view.findViewById<androidx.appcompat.widget.SearchView>(R.id.searchView)\r\n        searchView.setIconified(false)\r\n        recyclerView = view.findViewById(R.id.recyclerView)\r\n\r\n        recyclerView.layoutManager = LinearLayoutManager(requireContext())\r\n        adapter = SimpleItemAdapter()\r\n        recyclerView.adapter = adapter\r\n\r\n        // Sample data source - replace this with your Room DB query\r\n        val sampleData = listOf(\"Apple\", \"Banana\", \"Carrot\", \"Date\", \"Eggplant\")\r\n\r\n        // Set up live search\r\n        lifecycleScope.launch {\r\n            searchView.queryTextChanges()\r\n                .debounce(300)\r\n                .map { query ->\r\n                    sampleData.filter {\r\n                        it.contains(query, ignoreCase = true)\r\n                    }\r\n                }\r\n                .collect { filteredList ->\r\n                    adapter.submitList(filteredList)\r\n                }\r\n        }\r\n\r\n        return view\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt b/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt
+--- a/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt	(date 1746199074691)
+@@ -4,19 +4,29 @@
+ import android.view.LayoutInflater
+ import android.view.View
+ import android.view.ViewGroup
+-import android.widget.SearchView
++import android.widget.*
+ import androidx.fragment.app.Fragment
+-import androidx.lifecycle.lifecycleScope
+ import androidx.recyclerview.widget.LinearLayoutManager
+ import androidx.recyclerview.widget.RecyclerView
+-import kotlinx.coroutines.flow.*
+-import kotlinx.coroutines.launch
++import java.time.LocalDate
+ 
+ class SearchFragment : Fragment() {
+ 
+-    private lateinit var searchView: SearchView
++    private lateinit var categorySpinner: Spinner
++    private lateinit var dateSpinner: Spinner
+     private lateinit var recyclerView: RecyclerView
+-    private lateinit var adapter: SimpleItemAdapter
++    private lateinit var adapter: DummyAdapter
++    private lateinit var noItemsTextView: TextView // TextView for "No items"
++
++    private val dummyData = listOf(
++        DummyTransaction("Grocery", "Food", LocalDate.now().minusDays(2)),
++        DummyTransaction("Bus Ticket", "Transport", LocalDate.now().minusDays(10)),
++        DummyTransaction("Electric Bill", "Bills", LocalDate.now().minusDays(25)),
++        DummyTransaction("Dinner", "Food", LocalDate.now().minusDays(5)),
++        DummyTransaction("Gas", "Transport", LocalDate.now().minusDays(15))
++    )
++
++    private var filteredItems: List<DummyTransaction> = listOf()
+ 
+     override fun onCreateView(
+         inflater: LayoutInflater, container: ViewGroup?,
+@@ -24,31 +34,118 @@
+     ): View? {
+         val view = inflater.inflate(R.layout.fragment_search, container, false)
+ 
+-        val searchView = view.findViewById<androidx.appcompat.widget.SearchView>(R.id.searchView)
+-        searchView.setIconified(false)
++        // Initialize views
++        categorySpinner = view.findViewById(R.id.categorySpinner)
++        dateSpinner = view.findViewById(R.id.dateSpinner)
+         recyclerView = view.findViewById(R.id.recyclerView)
++        noItemsTextView = view.findViewById(R.id.noItemsTextView) // Reference to the "No items" TextView
++
++        setupRecyclerView()
++        setupSpinners()
+ 
++        return view
++    }
++
++    private fun setupRecyclerView() {
++        adapter = DummyAdapter()
+         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+-        adapter = SimpleItemAdapter()
+         recyclerView.adapter = adapter
+ 
+-        // Sample data source - replace this with your Room DB query
+-        val sampleData = listOf("Apple", "Banana", "Carrot", "Date", "Eggplant")
++        filteredItems = dummyData
++        adapter.submitList(filteredItems)
++        updateNoItemsMessage() // Update "No items" message visibility
++    }
++
++    private fun setupSpinners() {
++        val categoryOptions = listOf("All", "Food", "Transport", "Bills")
++        val dateOptions = listOf("All", "Last 7 Days", "Last 30 Days", "This Month")
++
++        categorySpinner.adapter = ArrayAdapter(
++            requireContext(),
++            android.R.layout.simple_spinner_dropdown_item,
++            categoryOptions
++        )
++
++        dateSpinner.adapter = ArrayAdapter(
++            requireContext(),
++            android.R.layout.simple_spinner_dropdown_item,
++            dateOptions
++        )
++
++        val listener = object : AdapterView.OnItemSelectedListener {
++            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
++                filterItems()
++            }
++
++            override fun onNothingSelected(parent: AdapterView<*>) {}
++        }
++
++        categorySpinner.onItemSelectedListener = listener
++        dateSpinner.onItemSelectedListener = listener
++    }
++
++    private fun filterItems() {
++        val selectedCategory = categorySpinner.selectedItem.toString()
++        val selectedDate = dateSpinner.selectedItem.toString()
++
++        filteredItems = dummyData.filter { item ->
++            val categoryMatches = selectedCategory == "All" || item.category == selectedCategory
++            val dateMatches = when (selectedDate) {
++                "All" -> true
++                "Last 7 Days" -> item.date.isAfter(LocalDate.now().minusDays(7))
++                "Last 30 Days" -> item.date.isAfter(LocalDate.now().minusDays(30))
++                "This Month" -> item.date.month == LocalDate.now().month
++                else -> true
++            }
++            categoryMatches && dateMatches
++        }
+ 
+-        // Set up live search
+-        lifecycleScope.launch {
+-            searchView.queryTextChanges()
+-                .debounce(300)
+-                .map { query ->
+-                    sampleData.filter {
+-                        it.contains(query, ignoreCase = true)
+-                    }
+-                }
+-                .collect { filteredList ->
+-                    adapter.submitList(filteredList)
+-                }
++        adapter.submitList(filteredItems)
++        updateNoItemsMessage() // Update the message visibility after filtering
++    }
++
++    private fun updateNoItemsMessage() {
++        // Show the "No items" message if there are no filtered items
++        if (filteredItems.isEmpty()) {
++            noItemsTextView.visibility = View.VISIBLE
++        } else {
++            noItemsTextView.visibility = View.GONE
++        }
++    }
++
++    // Dummy data model
++    data class DummyTransaction(
++        val title: String,
++        val category: String,
++        val date: LocalDate
++    )
++
++    // Basic RecyclerView adapter
++    class DummyAdapter : RecyclerView.Adapter<DummyAdapter.ViewHolder>() {
++
++        private var items = listOf<DummyTransaction>()
++
++        fun submitList(data: List<DummyTransaction>) {
++            items = data
++            notifyDataSetChanged()
+         }
+ 
+-        return view
++        class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
++            val textView: TextView = view.findViewById(android.R.id.text1)
++        }
++
++        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
++            val view = LayoutInflater.from(parent.context)
++                .inflate(android.R.layout.simple_list_item_1, parent, false)
++            return ViewHolder(view)
++        }
++
++        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
++            val item = items[position]
++            holder.textView.text = "> ${item.title} - ${item.category} (${item.date})"
++        }
++
++        override fun getItemCount(): Int = items.size
+     }
+ }
++
+Index: BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.budgetbee\r\n\r\nimport android.os.Bundle\r\nimport android.util.Log\r\nimport android.widget.Toast\r\nimport androidx.activity.enableEdgeToEdge\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport androidx.core.view.ViewCompat\r\nimport androidx.core.view.WindowInsetsCompat\r\nimport androidx.fragment.app.Fragment\r\nimport com.example.budgetbee.databinding.ActivityMainBinding\r\n\r\nclass MainActivity : AppCompatActivity() {\r\n\r\n    private lateinit var binding: ActivityMainBinding\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        enableEdgeToEdge()\r\n\r\n        try {\r\n            binding = ActivityMainBinding.inflate(layoutInflater)\r\n            setContentView(binding.root)\r\n\r\n            ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->\r\n                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())\r\n                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)\r\n                insets\r\n            }\r\n\r\n            replaceFragment(HomeFragment())\r\n\r\n            binding.bottomNavigationView.setOnItemSelectedListener { item ->\r\n                when (item.itemId) {\r\n                    R.id.home -> {\r\n                        replaceFragment(HomeFragment())\r\n                        true\r\n                    }\r\n                    R.id.profile -> {\r\n                        replaceFragment(ProfileFragment())\r\n                        true\r\n                    }\r\n                    R.id.transaction -> {\r\n                        replaceFragment(TransactionFragment())\r\n                        true\r\n                    }\r\n                    R.id.Categories -> {\r\n                        replaceFragment(CategoryFragment())\r\n                        true\r\n                    }\r\n                    R.id.search -> {\r\n                        replaceFragment(SearchFragment())\r\n                        true\r\n                    }\r\n                    else -> false\r\n                }\r\n            }\r\n        } catch (e: Exception) {\r\n            Log.e(\"MainActivity\", \"Error inflating layout or setting up navigation\", e)\r\n            Toast.makeText(this, \"Error loading app UI: ${e.localizedMessage}\", Toast.LENGTH_LONG).show()\r\n            finish() // optionally close the activity to prevent a blank screen\r\n        }\r\n    }\r\n\r\n    private fun replaceFragment(fragment: Fragment) {\r\n        val transaction = supportFragmentManager.beginTransaction()\r\n        transaction.replace(R.id.frame_layout, fragment)\r\n        transaction.commit()\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt b/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt
+--- a/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt	(date 1746195069794)
+@@ -10,6 +10,7 @@
+ import androidx.fragment.app.Fragment
+ import com.example.budgetbee.databinding.ActivityMainBinding
+ 
++
+ class MainActivity : AppCompatActivity() {
+ 
+     private lateinit var binding: ActivityMainBinding
+Index: BudgetBee/app/src/main/res/layout/fragment_search.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:id=\"@+id/searchFragmentLayout\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    android:gravity=\"center_horizontal\"\r\n    android:padding=\"16dp\">\r\n\r\n    <androidx.appcompat.widget.SearchView\r\n        android:id=\"@+id/searchView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:background=\"#DCDCDC\"\r\n        android:clickable=\"true\"\r\n        android:iconifiedByDefault=\"false\"\r\n        android:longClickable=\"true\"\r\n        android:queryHint=\"Search...\"/>\r\n\r\n    <androidx.recyclerview.widget.RecyclerView\r\n        android:id=\"@+id/recyclerView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        android:layout_weight=\"1\"\r\n        android:paddingTop=\"16dp\"\r\n        android:contentDescription=\"List of search results\" />\r\n\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BudgetBee/app/src/main/res/layout/fragment_search.xml b/BudgetBee/app/src/main/res/layout/fragment_search.xml
+--- a/BudgetBee/app/src/main/res/layout/fragment_search.xml	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/BudgetBee/app/src/main/res/layout/fragment_search.xml	(date 1746199245232)
+@@ -4,26 +4,59 @@
+     android:id="@+id/searchFragmentLayout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:orientation="vertical"
++    android:background="#FFC107"
+     android:gravity="center_horizontal"
++    android:orientation="vertical"
+     android:padding="16dp">
+ 
+-    <androidx.appcompat.widget.SearchView
+-        android:id="@+id/searchView"
++    <!-- RecyclerView for filtered results -->
++    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:background="#DCDCDC"
+-        android:clickable="true"
+-        android:iconifiedByDefault="false"
+-        android:longClickable="true"
+-        android:queryHint="Search..."/>
++        android:orientation="horizontal"
++        android:paddingTop="10dp">
++        <!-- Category Filter Spinner -->
++        <Spinner
++            android:id="@+id/categorySpinner"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_weight="0.5"
++            android:paddingVertical="20dp"
++            android:paddingHorizontal="10dp"
++            android:prompt="@string/select_category"
++            android:spinnerMode="dropdown" />
++
++        <!-- Date Filter Spinner -->
++        <Spinner
++            android:id="@+id/dateSpinner"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_weight="0.5"
++            android:paddingVertical="20dp"
++            android:paddingHorizontal="10dp"
++            android:prompt="@string/select_date_range"
++            android:spinnerMode="dropdown" />
++
++    </LinearLayout>
++
++    <TextView
++        android:id="@+id/noItemsTextView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="No items match the selected filters"
++        android:visibility="gone"
++        android:layout_gravity="center" />
+ 
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/recyclerView"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+-        android:paddingTop="16dp"
+-        android:contentDescription="List of search results" />
++        android:background="#FBD982"
++        android:contentDescription="Filtered results"
++        android:paddingTop="16dp" />
++
++
++
+ 
+ </LinearLayout>
+Index: BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt
+===================================================================
+diff --git a/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt b/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt
+deleted file mode 100644
+--- a/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ /dev/null	(revision d5520011de637df0e36165c1306554b88ce5128c)
+@@ -1,18 +0,0 @@
+-package com.example.budgetbee
+-
+-import androidx.appcompat.widget.SearchView
+-import kotlinx.coroutines.channels.awaitClose
+-import kotlinx.coroutines.flow.callbackFlow
+-import kotlinx.coroutines.flow.Flow
+-
+-fun SearchView.queryTextChanges(): Flow<String> = callbackFlow {
+-    val listener = object : SearchView.OnQueryTextListener {
+-        override fun onQueryTextSubmit(query: String?): Boolean = true
+-        override fun onQueryTextChange(newText: String?): Boolean {
+-            trySend(newText ?: "")
+-            return true
+-        }
+-    }
+-    setOnQueryTextListener(listener)
+-    awaitClose { setOnQueryTextListener(null) }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AndroidLayouts\">\r\n    <shared>\r\n      <config />\r\n    </shared>\r\n    <layouts>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_categories.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_confirm.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_edit_goals.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_goals.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_help_center.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_home.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_login.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_main.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_new_category.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_notification.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_profile.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_register.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_reset_password.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_settings.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_shop.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_terms_conditions.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_voucher.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_welcome.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_home.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_profile.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n      <layout url=\"file://$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml\">\r\n        <config>\r\n          <theme>@style/Theme.BudgetBee</theme>\r\n        </config>\r\n      </layout>\r\n    </layouts>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fdda4d40-8932-45ae-8cbe-1aaebffbe966\" name=\"Changes\" comment=\"separated code into 2 views and the code works and builds with no errors\">\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/logo-playstore.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/logo_background.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/logo.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/logo_round.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo_foreground.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo_round.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo_foreground.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo_round.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo_foreground.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo_round.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo_foreground.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo_round.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo_foreground.webp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo_round.webp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/assetWizardSettings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/assetWizardSettings.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ClangdSettings\">\r\n    <option name=\"formatViaClangd\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\\Users\\caleb\\.android\\avd\\Medium_Phone_API_35.avd)]\" />\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$/BudgetBee\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand />\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"layoutResourceFile\" />\r\n        <option value=\"Kotlin Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"feature/search\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;ST10258101&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubProjectSettings\">\r\n    <option name=\"branchProtectionPatterns\">\r\n      <list>\r\n        <option value=\"main\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git&quot;,\r\n    &quot;accountId&quot;: &quot;5476b842-0d1d-4da0-bec4-177f3dadd993&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n    <option name=\"showPreview\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2wLs2pbpV9oyYByIYyNT724ibYV\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Android App.BudgetBee.app.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,\r\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;feature/search&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_directory_selection&quot;: &quot;C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/luke jordan/Documents/GitHub/PROG7313_POE_PART2/BudgetBee&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\caleb\\AndroidStudioProjects\\PROG7313_POE_PART2\\BudgetBee\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"BudgetBee.app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\" activateToolWindowBeforeRun=\"false\">\r\n      <module name=\"BudgetBee.app\" />\r\n      <option name=\"ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION\" value=\"1\" />\r\n      <option name=\"DEPLOY\" value=\"true\" />\r\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\r\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\r\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\r\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\r\n      <option name=\"ALL_USERS\" value=\"false\" />\r\n      <option name=\"ALWAYS_INSTALL_WITH_PM\" value=\"false\" />\r\n      <option name=\"ALLOW_ASSUME_VERIFIED\" value=\"false\" />\r\n      <option name=\"CLEAR_APP_STORAGE\" value=\"false\" />\r\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\r\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\r\n      <option name=\"MODE\" value=\"default_activity\" />\r\n      <option name=\"RESTORE_ENABLED\" value=\"false\" />\r\n      <option name=\"RESTORE_FILE\" value=\"\" />\r\n      <option name=\"RESTORE_FRESH_INSTALL_ONLY\" value=\"false\" />\r\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\r\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\r\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_CONFIGURATION_ID\" value=\"-1\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_PROJECT_ID\" value=\"\" />\r\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\r\n      <Auto>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n        <option name=\"ATTACH_ON_WAIT_FOR_DEBUGGER\" value=\"false\" />\r\n        <option name=\"DEBUG_SANDBOX_SDK\" value=\"false\" />\r\n      </Auto>\r\n      <Hybrid>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n        <option name=\"ATTACH_ON_WAIT_FOR_DEBUGGER\" value=\"false\" />\r\n        <option name=\"DEBUG_SANDBOX_SDK\" value=\"false\" />\r\n      </Hybrid>\r\n      <Java>\r\n        <option name=\"ATTACH_ON_WAIT_FOR_DEBUGGER\" value=\"false\" />\r\n        <option name=\"DEBUG_SANDBOX_SDK\" value=\"false\" />\r\n      </Java>\r\n      <Native>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n        <option name=\"ATTACH_ON_WAIT_FOR_DEBUGGER\" value=\"false\" />\r\n        <option name=\"DEBUG_SANDBOX_SDK\" value=\"false\" />\r\n      </Native>\r\n      <Profilers>\r\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Java/Kotlin Method Sample (legacy)\" />\r\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\r\n      </Profilers>\r\n      <option name=\"DEEP_LINK\" value=\"\" />\r\n      <option name=\"ACTIVITY\" value=\"\" />\r\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\r\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\r\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\r\n      <method v=\"2\">\r\n        <option name=\"Android.Gradle.BeforeRunTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fdda4d40-8932-45ae-8cbe-1aaebffbe966\" name=\"Changes\" comment=\"\" />\r\n      <created>1745831983573</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1745831983573</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"updated goals code with no build errors\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746092351579</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746092351579</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"separated code into 2 views and the code works and builds with no errors\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746104918623</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746104918623</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Merge pull request #2 from CalebHartsliefST10255912/Login-And-Register&#10;&#10;Login and register\" />\r\n    <MESSAGE value=\"updated goals code with no build errors\" />\r\n    <MESSAGE value=\"separated code into 2 views and the code works and builds with no errors\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"separated code into 2 views and the code works and builds with no errors\" />\r\n  </component>\r\n  <component name=\"play_dynamic_filters_status\">\r\n    <option name=\"appIdToCheckInfo\">\r\n      <map>\r\n        <entry key=\"com.example.budgetbee\">\r\n          <value>\r\n            <CheckInfo lastCheckTimestamp=\"1746184036734\" />\r\n          </value>\r\n        </entry>\r\n        <entry key=\"com.example.budgetbee.test\">\r\n          <value>\r\n            <CheckInfo lastCheckTimestamp=\"1746184036761\" />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d5520011de637df0e36165c1306554b88ce5128c)
++++ b/.idea/workspace.xml	(date 1746209317893)
+@@ -137,34 +137,14 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="separated code into 2 views and the code works and builds with no errors">
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/logo-playstore.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/logo_background.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/logo.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/logo_round.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo_foreground.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/logo_round.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo_foreground.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/logo_round.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo_foreground.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/logo_round.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo_foreground.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/logo_round.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo_foreground.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/logo_round.webp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/strings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -203,7 +183,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="feature/search" />
++        <entry key="$PROJECT_DIR$" value="fix/design-caleb" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -240,23 +220,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Android App.BudgetBee.app.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;feature/search&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_directory_selection&quot;: &quot;C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/luke jordan/Documents/GitHub/PROG7313_POE_PART2/BudgetBee&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Android App.BudgetBee.app.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.cidr.known.project.marker": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.readMode.enableVisualFormatting": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "cf.first.check.clang-format": "false",
++    "cidr.known.project.marker": "true",
++    "git-widget-placeholder": "main",
++    "kotlin-language-version-configured": "true",
++    "last_directory_selection": "C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java",
++    "last_opened_file_path": "C:/Users/luke jordan/Documents/GitHub/PROG7313_POE_PART2/BudgetBee",
++    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\caleb\AndroidStudioProjects\PROG7313_POE_PART2\BudgetBee" />
