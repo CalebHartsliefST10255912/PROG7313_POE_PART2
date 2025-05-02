@@ -4,4 +4,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="select_category">Select a category</string>
     <string name="select_date_range">Select a date range</string>
+
+    <string name="terms_and_conditions_text">
+    This app is provided "as is," meaning we can\'t guarantee you’ll become a financial genius overnight. But hey, at least we’re not Caleb – missing classes and savings goals.\n\n
+    Responsibility:\nThis app helps track expenses, not stop you from making questionable life choices (looking at you, Matthew – just because you\'re bald doesn’t mean you need that many hats).\n\n
+    Conduct:\nNo stealing data. Luke already took a loincloth – we don’t need more theft in this community.\nAvoid getting your bank account banged (like Bob – he bangs).\n\n
+    Rewards:\nYes, you can earn points. No, you can’t redeem them for a new hairline (sorry, Matthew). If you actually stick to your budget, though, you might afford real rewards like vouchers for KFC and Typo.\n\n
+    Data:\nWe do not sell your data, but we also do not protect it from the sheer force of Luke’s financial decisions.\n\n
+    Termination:\nIf you break these rules, we might revoke your access. Or worse, we’ll let Caleb handle your finances – and he’s never here.\n\n
+    Truth:\nLastly, all users must acknowledge that Vinay is the epitome of humankind and the greatest person to ever grace this planet. If you disagree, please reflect on your life choices and reconsider.\n\n
+    By using this app, you accept all the above terms, and you acknowledge that financial wisdom is not guaranteed. But at least you’ll always have Bob (he bangs) for emotional support.
+</string>
+
 </resources>

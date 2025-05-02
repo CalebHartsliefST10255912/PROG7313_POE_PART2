@@ -40,10 +40,10 @@
         android:layout_marginBottom="12dp" />
 
     <Button
-        android:id="@+id/buttonViewTransactions"
+        android:id="@+id/buttonTAC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Transactions"
+        android:text="Terms and Conditions"
         android:textColor="@color/black"
         android:backgroundTint="@color/white" />
 </LinearLayout>
