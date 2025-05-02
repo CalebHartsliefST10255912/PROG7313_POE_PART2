@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var userDao: UserDao
@@ -52,9 +53,9 @@ class LoginActivity : AppCompatActivity() {
                         .show()
 
                     Log.d("LoginPassword", "Email: ${user.userEmail}, Phone: ${user.userPhone}, Password: ${user.password}")
+                    
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
 
-
-                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
 
