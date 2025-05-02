@@ -53,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
                         .show()
 
                     Log.d("LoginPassword", "Email: ${user.userEmail}, Phone: ${user.userPhone}, Password: ${user.password}")
+                    
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
 
                     startActivity(intent)
@@ -66,6 +67,11 @@ class LoginActivity : AppCompatActivity() {
             }
 
 
+        }
+
+        textForgotPassword.setOnClickListener(){
+            val intent = Intent(this, ResetPasswordActivity::class.java)
+            startActivity(intent)
         }
 
 

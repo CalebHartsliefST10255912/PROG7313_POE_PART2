@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Monthly Spending Goals"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/textMinGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min Goal: R 0.00"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textMaxGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max Goal: R 0.00"
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/buttonEditGoals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Goals" />
+</LinearLayout>
