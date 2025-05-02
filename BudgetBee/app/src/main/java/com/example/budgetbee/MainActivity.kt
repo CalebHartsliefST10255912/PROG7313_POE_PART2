@@ -28,9 +28,10 @@ class MainActivity : AppCompatActivity() {
                 insets
             }
 
-            replaceFragment(HomeFragment())
+
 
             binding.bottomNavigationView.setOnItemSelectedListener { item ->
+                Log.d("NavClick", "Item clicked: ${item.itemId}")
                 when (item.itemId) {
                     R.id.home -> {
                         replaceFragment(HomeFragment())

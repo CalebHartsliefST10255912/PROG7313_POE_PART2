@@ -1,0 +1,620 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fdda4d40-8932-45ae-8cbe-1aaebffbe966\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/compiler.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/deploymentTargetSelector.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/gradle.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/kotlinc.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/migrations.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/misc.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/runConfigurations.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/.idea/vcs.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/caches/deviceStreaming.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/gradle.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/migrations.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/misc.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/runConfigurations.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/vcs.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/.idea/workspace.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/build.gradle.kts\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/proguard-rules.pro\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/androidTest/java/com/example/budgetbee/ExampleInstrumentedTest.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/DeleteAccountConfirmActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/DeleteAccountSuccessActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/DeleteAccountWarningActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/EditProfileActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HelpCenterActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/LoginActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MissionActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/NewCategoryActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/NotificationActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ProfileActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/RegisterActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SettingsActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ShopActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SplashActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TermsConditionsActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionsActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/VoucherActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/WelcomeActivity.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/ic_launcher_background.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/ic_launcher_foreground.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_categories.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_confirm.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_success.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_warning.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_edit_profile.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_help_center.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_home.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_login.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_main.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_mission.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_new_category.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_notification.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_profile.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_register.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_settings.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_shop.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_terms_conditions.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_voucher.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_welcome.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/ic_launcher.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/ic_launcher.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/ic_launcher.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/values-night/themes.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/values/colors.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/values/strings.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/values/themes.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/xml/backup_rules.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/main/res/xml/data_extraction_rules.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/app/src/test/java/com/example/budgetbee/ExampleUnitTest.kt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/build.gradle.kts\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/gradle.properties\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/gradle/libs.versions.toml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/gradle/wrapper/gradle-wrapper.jar\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/gradle/wrapper/gradle-wrapper.properties\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/gradlew\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/gradlew.bat\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BudgetBee/settings.gradle.kts\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ClangdSettings\">\r\n    <option name=\"formatViaClangd\" value=\"false\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"ST10258101\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git\",\r\n    \"accountId\": \"1c5dfbf6-15f7-4266-9de1-1ba3e2158fd8\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2wLs2pbpV9oyYByIYyNT724ibYV\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"RunOnceActivity.readMode.enableVisualFormatting\": \"true\",\r\n    \"cf.first.check.clang-format\": \"false\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"git-widget-placeholder\": \"Vinay\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/vroop/Documents/GitHub/PROG7313_POE_PART2\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fdda4d40-8932-45ae-8cbe-1aaebffbe966\" name=\"Changes\" comment=\"\" />\r\n      <created>1745831983573</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1745831983573</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4d56b8fa435bdb864d109714406c9f61ea1da3a5)
++++ b/.idea/workspace.xml	(date 1746008583467)
+@@ -4,100 +4,8 @@
+     <option name="autoReloadType" value="NONE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/compiler.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/gradle.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/kotlinc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/migrations.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/misc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/runConfigurations.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/.idea/vcs.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/gradle.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/migrations.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/misc.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/runConfigurations.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/vcs.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/.idea/workspace.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/build.gradle.kts" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/proguard-rules.pro" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/androidTest/java/com/example/budgetbee/ExampleInstrumentedTest.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/DeleteAccountConfirmActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/DeleteAccountSuccessActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/DeleteAccountWarningActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/EditProfileActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HelpCenterActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/HomeActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/LoginActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MissionActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/NewCategoryActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/NotificationActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ProfileActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/RegisterActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SettingsActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ShopActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SplashActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TermsConditionsActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionsActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/VoucherActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/WelcomeActivity.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_categories.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_confirm.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_success.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_warning.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_edit_profile.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_help_center.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_home.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_mission.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_new_category.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_notification.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_profile.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_register.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_settings.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_shop.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_terms_conditions.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_voucher.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_welcome.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/colors.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/strings.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/values/themes.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/test/java/com/example/budgetbee/ExampleUnitTest.kt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/build.gradle.kts" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/gradle.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/gradle/libs.versions.toml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/gradlew" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/gradlew.bat" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BudgetBee/settings.gradle.kts" beforeDir="false" />
++    <list default="true" id="fdda4d40-8932-45ae-8cbe-1aaebffbe966" name="Changes" comment="First">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -110,38 +18,46 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "ST10258101"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;ST10258101&quot;
+   }
+-}]]></component>
++}</component>
++  <component name="GithubProjectSettings">
++    <option name="branchProtectionPatterns">
++      <list>
++        <option value="main" />
++      </list>
++    </option>
++  </component>
+   <component name="GithubPullRequestsUISettings"><![CDATA[{
+   "selectedUrlAndAccountId": {
+     "url": "https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git",
+-    "accountId": "1c5dfbf6-15f7-4266-9de1-1ba3e2158fd8"
++    "accountId": "5476b842-0d1d-4da0-bec4-177f3dadd993"
+   }
+ }]]></component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 0
+ }</component>
+   <component name="ProjectId" id="2wLs2pbpV9oyYByIYyNT724ibYV" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.cidr.known.project.marker": "true",
+-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+-    "cf.first.check.clang-format": "false",
+-    "cidr.known.project.marker": "true",
+-    "git-widget-placeholder": "Vinay",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/vroop/Documents/GitHub/PROG7313_POE_PART2"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
++    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
++    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;feature/db-access&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/vroop/Documents/GitHub/PROG7313_POE_PART2&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -153,4 +69,8 @@
+     </task>
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="First" />
++    <option name="LAST_COMMIT_MESSAGE" value="First" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: .idea/caches/deviceStreaming.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DeviceStreaming\">\r\n    <option name=\"deviceSelectionList\">\r\n      <list>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"27\" />\r\n          <option name=\"brand\" value=\"DOCOMO\" />\r\n          <option name=\"codename\" value=\"F01L\" />\r\n          <option name=\"id\" value=\"F01L\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"FUJITSU\" />\r\n          <option name=\"name\" value=\"F-01L\" />\r\n          <option name=\"screenDensity\" value=\"360\" />\r\n          <option name=\"screenX\" value=\"720\" />\r\n          <option name=\"screenY\" value=\"1280\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"OnePlus\" />\r\n          <option name=\"codename\" value=\"OP5552L1\" />\r\n          <option name=\"id\" value=\"OP5552L1\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"OnePlus\" />\r\n          <option name=\"name\" value=\"CPH2415\" />\r\n          <option name=\"screenDensity\" value=\"480\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2412\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"OPPO\" />\r\n          <option name=\"codename\" value=\"OP573DL1\" />\r\n          <option name=\"id\" value=\"OP573DL1\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"OPPO\" />\r\n          <option name=\"name\" value=\"CPH2557\" />\r\n          <option name=\"screenDensity\" value=\"480\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"28\" />\r\n          <option name=\"brand\" value=\"DOCOMO\" />\r\n          <option name=\"codename\" value=\"SH-01L\" />\r\n          <option name=\"id\" value=\"SH-01L\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"SHARP\" />\r\n          <option name=\"name\" value=\"AQUOS sense2 SH-01L\" />\r\n          <option name=\"screenDensity\" value=\"480\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2160\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"Lenovo\" />\r\n          <option name=\"codename\" value=\"TB370FU\" />\r\n          <option name=\"formFactor\" value=\"Tablet\" />\r\n          <option name=\"id\" value=\"TB370FU\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Lenovo\" />\r\n          <option name=\"name\" value=\"Tab P12\" />\r\n          <option name=\"screenDensity\" value=\"340\" />\r\n          <option name=\"screenX\" value=\"1840\" />\r\n          <option name=\"screenY\" value=\"2944\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"a15\" />\r\n          <option name=\"id\" value=\"a15\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"A15\" />\r\n          <option name=\"screenDensity\" value=\"450\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"a35x\" />\r\n          <option name=\"id\" value=\"a35x\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"A35\" />\r\n          <option name=\"screenDensity\" value=\"450\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"31\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"a51\" />\r\n          <option name=\"id\" value=\"a51\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy A51\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"akita\" />\r\n          <option name=\"id\" value=\"akita\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 8a\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"motorola\" />\r\n          <option name=\"codename\" value=\"arcfox\" />\r\n          <option name=\"id\" value=\"arcfox\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Motorola\" />\r\n          <option name=\"name\" value=\"razr plus 2024\" />\r\n          <option name=\"screenDensity\" value=\"360\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"1272\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"motorola\" />\r\n          <option name=\"codename\" value=\"austin\" />\r\n          <option name=\"id\" value=\"austin\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Motorola\" />\r\n          <option name=\"name\" value=\"moto g 5G (2022)\" />\r\n          <option name=\"screenDensity\" value=\"280\" />\r\n          <option name=\"screenX\" value=\"720\" />\r\n          <option name=\"screenY\" value=\"1600\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"b0q\" />\r\n          <option name=\"id\" value=\"b0q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy S22 Ultra\" />\r\n          <option name=\"screenDensity\" value=\"600\" />\r\n          <option name=\"screenX\" value=\"1440\" />\r\n          <option name=\"screenY\" value=\"3088\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"32\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"bluejay\" />\r\n          <option name=\"id\" value=\"bluejay\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 6a\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"caiman\" />\r\n          <option name=\"id\" value=\"caiman\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 9 Pro\" />\r\n          <option name=\"screenDensity\" value=\"360\" />\r\n          <option name=\"screenX\" value=\"960\" />\r\n          <option name=\"screenY\" value=\"2142\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"comet\" />\r\n          <option name=\"default\" value=\"true\" />\r\n          <option name=\"id\" value=\"comet\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 9 Pro Fold\" />\r\n          <option name=\"screenDensity\" value=\"390\" />\r\n          <option name=\"screenX\" value=\"2076\" />\r\n          <option name=\"screenY\" value=\"2152\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"29\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"crownqlteue\" />\r\n          <option name=\"id\" value=\"crownqlteue\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy Note9\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"2220\" />\r\n          <option name=\"screenY\" value=\"1080\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"dm2q\" />\r\n          <option name=\"id\" value=\"dm2q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"S23 Plus\" />\r\n          <option name=\"screenDensity\" value=\"450\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"dm3q\" />\r\n          <option name=\"id\" value=\"dm3q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy S23 Ultra\" />\r\n          <option name=\"screenDensity\" value=\"600\" />\r\n          <option name=\"screenX\" value=\"1440\" />\r\n          <option name=\"screenY\" value=\"3088\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"e1q\" />\r\n          <option name=\"default\" value=\"true\" />\r\n          <option name=\"id\" value=\"e1q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy S24\" />\r\n          <option name=\"screenDensity\" value=\"480\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"e3q\" />\r\n          <option name=\"id\" value=\"e3q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy S24 Ultra\" />\r\n          <option name=\"screenDensity\" value=\"450\" />\r\n          <option name=\"screenX\" value=\"1440\" />\r\n          <option name=\"screenY\" value=\"3120\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"eos\" />\r\n          <option name=\"id\" value=\"eos\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Eos\" />\r\n          <option name=\"screenDensity\" value=\"320\" />\r\n          <option name=\"screenX\" value=\"384\" />\r\n          <option name=\"screenY\" value=\"384\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"felix\" />\r\n          <option name=\"id\" value=\"felix\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel Fold\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"2208\" />\r\n          <option name=\"screenY\" value=\"1840\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"felix\" />\r\n          <option name=\"id\" value=\"felix\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel Fold\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"2208\" />\r\n          <option name=\"screenY\" value=\"1840\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"felix_camera\" />\r\n          <option name=\"id\" value=\"felix_camera\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel Fold (Camera-enabled)\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"2208\" />\r\n          <option name=\"screenY\" value=\"1840\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"motorola\" />\r\n          <option name=\"codename\" value=\"fogona\" />\r\n          <option name=\"id\" value=\"fogona\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Motorola\" />\r\n          <option name=\"name\" value=\"moto g play - 2024\" />\r\n          <option name=\"screenDensity\" value=\"280\" />\r\n          <option name=\"screenX\" value=\"720\" />\r\n          <option name=\"screenY\" value=\"1600\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"g0q\" />\r\n          <option name=\"id\" value=\"g0q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"SM-S906U1\" />\r\n          <option name=\"screenDensity\" value=\"450\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"gta9pwifi\" />\r\n          <option name=\"id\" value=\"gta9pwifi\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"SM-X210\" />\r\n          <option name=\"screenDensity\" value=\"240\" />\r\n          <option name=\"screenX\" value=\"1200\" />\r\n          <option name=\"screenY\" value=\"1920\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"gts7xllite\" />\r\n          <option name=\"id\" value=\"gts7xllite\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"SM-T738U\" />\r\n          <option name=\"screenDensity\" value=\"340\" />\r\n          <option name=\"screenX\" value=\"1600\" />\r\n          <option name=\"screenY\" value=\"2560\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"gts8uwifi\" />\r\n          <option name=\"formFactor\" value=\"Tablet\" />\r\n          <option name=\"id\" value=\"gts8uwifi\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy Tab S8 Ultra\" />\r\n          <option name=\"screenDensity\" value=\"320\" />\r\n          <option name=\"screenX\" value=\"1848\" />\r\n          <option name=\"screenY\" value=\"2960\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"gts8wifi\" />\r\n          <option name=\"formFactor\" value=\"Tablet\" />\r\n          <option name=\"id\" value=\"gts8wifi\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy Tab S8\" />\r\n          <option name=\"screenDensity\" value=\"274\" />\r\n          <option name=\"screenX\" value=\"1600\" />\r\n          <option name=\"screenY\" value=\"2560\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"gts9fe\" />\r\n          <option name=\"id\" value=\"gts9fe\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy Tab S9 FE 5G\" />\r\n          <option name=\"screenDensity\" value=\"280\" />\r\n          <option name=\"screenX\" value=\"1440\" />\r\n          <option name=\"screenY\" value=\"2304\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"husky\" />\r\n          <option name=\"id\" value=\"husky\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 8 Pro\" />\r\n          <option name=\"screenDensity\" value=\"390\" />\r\n          <option name=\"screenX\" value=\"1008\" />\r\n          <option name=\"screenY\" value=\"2244\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"30\" />\r\n          <option name=\"brand\" value=\"motorola\" />\r\n          <option name=\"codename\" value=\"java\" />\r\n          <option name=\"id\" value=\"java\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Motorola\" />\r\n          <option name=\"name\" value=\"G20\" />\r\n          <option name=\"screenDensity\" value=\"280\" />\r\n          <option name=\"screenX\" value=\"720\" />\r\n          <option name=\"screenY\" value=\"1600\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"komodo\" />\r\n          <option name=\"id\" value=\"komodo\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 9 Pro XL\" />\r\n          <option name=\"screenDensity\" value=\"360\" />\r\n          <option name=\"screenX\" value=\"1008\" />\r\n          <option name=\"screenY\" value=\"2244\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"lynx\" />\r\n          <option name=\"id\" value=\"lynx\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 7a\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"motorola\" />\r\n          <option name=\"codename\" value=\"maui\" />\r\n          <option name=\"id\" value=\"maui\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Motorola\" />\r\n          <option name=\"name\" value=\"moto g play - 2023\" />\r\n          <option name=\"screenDensity\" value=\"280\" />\r\n          <option name=\"screenX\" value=\"720\" />\r\n          <option name=\"screenY\" value=\"1600\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"o1q\" />\r\n          <option name=\"id\" value=\"o1q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy S21\" />\r\n          <option name=\"screenDensity\" value=\"421\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"31\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"oriole\" />\r\n          <option name=\"id\" value=\"oriole\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 6\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"panther\" />\r\n          <option name=\"id\" value=\"panther\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 7\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"q5q\" />\r\n          <option name=\"id\" value=\"q5q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy Z Fold5\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1812\" />\r\n          <option name=\"screenY\" value=\"2176\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"q6q\" />\r\n          <option name=\"id\" value=\"q6q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy Z Fold6\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1856\" />\r\n          <option name=\"screenY\" value=\"2160\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"30\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"r11\" />\r\n          <option name=\"formFactor\" value=\"Wear OS\" />\r\n          <option name=\"id\" value=\"r11\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel Watch\" />\r\n          <option name=\"screenDensity\" value=\"320\" />\r\n          <option name=\"screenX\" value=\"384\" />\r\n          <option name=\"screenY\" value=\"384\" />\r\n          <option name=\"type\" value=\"WEAR_OS\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"r11q\" />\r\n          <option name=\"id\" value=\"r11q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"SM-S711U\" />\r\n          <option name=\"screenDensity\" value=\"450\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"30\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"redfin\" />\r\n          <option name=\"id\" value=\"redfin\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 5\" />\r\n          <option name=\"screenDensity\" value=\"440\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2340\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"shiba\" />\r\n          <option name=\"id\" value=\"shiba\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 8\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"samsung\" />\r\n          <option name=\"codename\" value=\"t2q\" />\r\n          <option name=\"id\" value=\"t2q\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Samsung\" />\r\n          <option name=\"name\" value=\"Galaxy S21 Plus\" />\r\n          <option name=\"screenDensity\" value=\"394\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2400\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"33\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"tangorpro\" />\r\n          <option name=\"formFactor\" value=\"Tablet\" />\r\n          <option name=\"id\" value=\"tangorpro\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel Tablet\" />\r\n          <option name=\"screenDensity\" value=\"320\" />\r\n          <option name=\"screenX\" value=\"1600\" />\r\n          <option name=\"screenY\" value=\"2560\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"34\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"tokay\" />\r\n          <option name=\"default\" value=\"true\" />\r\n          <option name=\"id\" value=\"tokay\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 9\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2424\" />\r\n        </PersistentDeviceSelectionData>\r\n        <PersistentDeviceSelectionData>\r\n          <option name=\"api\" value=\"35\" />\r\n          <option name=\"brand\" value=\"google\" />\r\n          <option name=\"codename\" value=\"tokay\" />\r\n          <option name=\"default\" value=\"true\" />\r\n          <option name=\"id\" value=\"tokay\" />\r\n          <option name=\"labId\" value=\"google\" />\r\n          <option name=\"manufacturer\" value=\"Google\" />\r\n          <option name=\"name\" value=\"Pixel 9\" />\r\n          <option name=\"screenDensity\" value=\"420\" />\r\n          <option name=\"screenX\" value=\"1080\" />\r\n          <option name=\"screenY\" value=\"2424\" />\r\n        </PersistentDeviceSelectionData>\r\n      </list>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/caches/deviceStreaming.xml b/.idea/caches/deviceStreaming.xml
+--- a/.idea/caches/deviceStreaming.xml	(revision 4d56b8fa435bdb864d109714406c9f61ea1da3a5)
++++ b/.idea/caches/deviceStreaming.xml	(date 1746008583467)
+@@ -8,7 +8,6 @@
+           <option name="brand" value="DOCOMO" />
+           <option name="codename" value="F01L" />
+           <option name="id" value="F01L" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="FUJITSU" />
+           <option name="name" value="F-01L" />
+           <option name="screenDensity" value="360" />
+@@ -20,7 +19,6 @@
+           <option name="brand" value="OnePlus" />
+           <option name="codename" value="OP5552L1" />
+           <option name="id" value="OP5552L1" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="OnePlus" />
+           <option name="name" value="CPH2415" />
+           <option name="screenDensity" value="480" />
+@@ -32,7 +30,6 @@
+           <option name="brand" value="OPPO" />
+           <option name="codename" value="OP573DL1" />
+           <option name="id" value="OP573DL1" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="OPPO" />
+           <option name="name" value="CPH2557" />
+           <option name="screenDensity" value="480" />
+@@ -44,7 +41,6 @@
+           <option name="brand" value="DOCOMO" />
+           <option name="codename" value="SH-01L" />
+           <option name="id" value="SH-01L" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="SHARP" />
+           <option name="name" value="AQUOS sense2 SH-01L" />
+           <option name="screenDensity" value="480" />
+@@ -55,9 +51,7 @@
+           <option name="api" value="34" />
+           <option name="brand" value="Lenovo" />
+           <option name="codename" value="TB370FU" />
+-          <option name="formFactor" value="Tablet" />
+           <option name="id" value="TB370FU" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Lenovo" />
+           <option name="name" value="Tab P12" />
+           <option name="screenDensity" value="340" />
+@@ -69,9 +63,19 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="a15" />
+           <option name="id" value="a15" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="A15" />
++          <option name="screenDensity" value="450" />
++          <option name="screenX" value="1080" />
++          <option name="screenY" value="2340" />
++        </PersistentDeviceSelectionData>
++        <PersistentDeviceSelectionData>
++          <option name="api" value="34" />
++          <option name="brand" value="samsung" />
++          <option name="codename" value="a16x" />
++          <option name="id" value="a16x" />
++          <option name="manufacturer" value="Samsung" />
++          <option name="name" value="A16 5G" />
+           <option name="screenDensity" value="450" />
+           <option name="screenX" value="1080" />
+           <option name="screenY" value="2340" />
+@@ -81,7 +85,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="a35x" />
+           <option name="id" value="a35x" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="A35" />
+           <option name="screenDensity" value="450" />
+@@ -93,7 +96,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="a51" />
+           <option name="id" value="a51" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy A51" />
+           <option name="screenDensity" value="420" />
+@@ -105,7 +107,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="akita" />
+           <option name="id" value="akita" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 8a" />
+           <option name="screenDensity" value="420" />
+@@ -117,7 +118,6 @@
+           <option name="brand" value="motorola" />
+           <option name="codename" value="arcfox" />
+           <option name="id" value="arcfox" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Motorola" />
+           <option name="name" value="razr plus 2024" />
+           <option name="screenDensity" value="360" />
+@@ -129,7 +129,6 @@
+           <option name="brand" value="motorola" />
+           <option name="codename" value="austin" />
+           <option name="id" value="austin" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Motorola" />
+           <option name="name" value="moto g 5G (2022)" />
+           <option name="screenDensity" value="280" />
+@@ -141,7 +140,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="b0q" />
+           <option name="id" value="b0q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy S22 Ultra" />
+           <option name="screenDensity" value="600" />
+@@ -153,7 +151,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="bluejay" />
+           <option name="id" value="bluejay" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 6a" />
+           <option name="screenDensity" value="420" />
+@@ -165,7 +162,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="caiman" />
+           <option name="id" value="caiman" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 9 Pro" />
+           <option name="screenDensity" value="360" />
+@@ -176,9 +172,7 @@
+           <option name="api" value="34" />
+           <option name="brand" value="google" />
+           <option name="codename" value="comet" />
+-          <option name="default" value="true" />
+           <option name="id" value="comet" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 9 Pro Fold" />
+           <option name="screenDensity" value="390" />
+@@ -190,7 +184,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="crownqlteue" />
+           <option name="id" value="crownqlteue" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy Note9" />
+           <option name="screenDensity" value="420" />
+@@ -202,7 +195,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="dm2q" />
+           <option name="id" value="dm2q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="S23 Plus" />
+           <option name="screenDensity" value="450" />
+@@ -214,7 +206,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="dm3q" />
+           <option name="id" value="dm3q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy S23 Ultra" />
+           <option name="screenDensity" value="600" />
+@@ -225,9 +216,7 @@
+           <option name="api" value="34" />
+           <option name="brand" value="samsung" />
+           <option name="codename" value="e1q" />
+-          <option name="default" value="true" />
+           <option name="id" value="e1q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy S24" />
+           <option name="screenDensity" value="480" />
+@@ -239,7 +228,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="e3q" />
+           <option name="id" value="e3q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy S24 Ultra" />
+           <option name="screenDensity" value="450" />
+@@ -251,7 +239,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="eos" />
+           <option name="id" value="eos" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Eos" />
+           <option name="screenDensity" value="320" />
+@@ -263,7 +250,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="felix" />
+           <option name="id" value="felix" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel Fold" />
+           <option name="screenDensity" value="420" />
+@@ -275,7 +261,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="felix" />
+           <option name="id" value="felix" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel Fold" />
+           <option name="screenDensity" value="420" />
+@@ -287,7 +272,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="felix_camera" />
+           <option name="id" value="felix_camera" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel Fold (Camera-enabled)" />
+           <option name="screenDensity" value="420" />
+@@ -299,7 +283,6 @@
+           <option name="brand" value="motorola" />
+           <option name="codename" value="fogona" />
+           <option name="id" value="fogona" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Motorola" />
+           <option name="name" value="moto g play - 2024" />
+           <option name="screenDensity" value="280" />
+@@ -311,7 +294,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="g0q" />
+           <option name="id" value="g0q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="SM-S906U1" />
+           <option name="screenDensity" value="450" />
+@@ -323,7 +305,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="gta9pwifi" />
+           <option name="id" value="gta9pwifi" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="SM-X210" />
+           <option name="screenDensity" value="240" />
+@@ -335,7 +316,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="gts7xllite" />
+           <option name="id" value="gts7xllite" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="SM-T738U" />
+           <option name="screenDensity" value="340" />
+@@ -346,9 +326,7 @@
+           <option name="api" value="33" />
+           <option name="brand" value="samsung" />
+           <option name="codename" value="gts8uwifi" />
+-          <option name="formFactor" value="Tablet" />
+           <option name="id" value="gts8uwifi" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy Tab S8 Ultra" />
+           <option name="screenDensity" value="320" />
+@@ -359,9 +337,7 @@
+           <option name="api" value="34" />
+           <option name="brand" value="samsung" />
+           <option name="codename" value="gts8wifi" />
+-          <option name="formFactor" value="Tablet" />
+           <option name="id" value="gts8wifi" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy Tab S8" />
+           <option name="screenDensity" value="274" />
+@@ -373,7 +349,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="gts9fe" />
+           <option name="id" value="gts9fe" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy Tab S9 FE 5G" />
+           <option name="screenDensity" value="280" />
+@@ -385,7 +360,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="husky" />
+           <option name="id" value="husky" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 8 Pro" />
+           <option name="screenDensity" value="390" />
+@@ -397,7 +371,6 @@
+           <option name="brand" value="motorola" />
+           <option name="codename" value="java" />
+           <option name="id" value="java" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Motorola" />
+           <option name="name" value="G20" />
+           <option name="screenDensity" value="280" />
+@@ -409,7 +382,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="komodo" />
+           <option name="id" value="komodo" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 9 Pro XL" />
+           <option name="screenDensity" value="360" />
+@@ -421,7 +393,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="lynx" />
+           <option name="id" value="lynx" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 7a" />
+           <option name="screenDensity" value="420" />
+@@ -433,7 +404,6 @@
+           <option name="brand" value="motorola" />
+           <option name="codename" value="maui" />
+           <option name="id" value="maui" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Motorola" />
+           <option name="name" value="moto g play - 2023" />
+           <option name="screenDensity" value="280" />
+@@ -445,7 +415,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="o1q" />
+           <option name="id" value="o1q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy S21" />
+           <option name="screenDensity" value="421" />
+@@ -457,7 +426,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="oriole" />
+           <option name="id" value="oriole" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 6" />
+           <option name="screenDensity" value="420" />
+@@ -469,7 +437,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="panther" />
+           <option name="id" value="panther" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 7" />
+           <option name="screenDensity" value="420" />
+@@ -481,7 +448,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="q5q" />
+           <option name="id" value="q5q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy Z Fold5" />
+           <option name="screenDensity" value="420" />
+@@ -493,7 +459,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="q6q" />
+           <option name="id" value="q6q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy Z Fold6" />
+           <option name="screenDensity" value="420" />
+@@ -504,9 +469,7 @@
+           <option name="api" value="30" />
+           <option name="brand" value="google" />
+           <option name="codename" value="r11" />
+-          <option name="formFactor" value="Wear OS" />
+           <option name="id" value="r11" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel Watch" />
+           <option name="screenDensity" value="320" />
+@@ -519,7 +482,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="r11q" />
+           <option name="id" value="r11q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="SM-S711U" />
+           <option name="screenDensity" value="450" />
+@@ -531,7 +493,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="redfin" />
+           <option name="id" value="redfin" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 5" />
+           <option name="screenDensity" value="440" />
+@@ -543,7 +504,6 @@
+           <option name="brand" value="google" />
+           <option name="codename" value="shiba" />
+           <option name="id" value="shiba" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 8" />
+           <option name="screenDensity" value="420" />
+@@ -555,7 +515,6 @@
+           <option name="brand" value="samsung" />
+           <option name="codename" value="t2q" />
+           <option name="id" value="t2q" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Samsung" />
+           <option name="name" value="Galaxy S21 Plus" />
+           <option name="screenDensity" value="394" />
+@@ -566,9 +525,7 @@
+           <option name="api" value="33" />
+           <option name="brand" value="google" />
+           <option name="codename" value="tangorpro" />
+-          <option name="formFactor" value="Tablet" />
+           <option name="id" value="tangorpro" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel Tablet" />
+           <option name="screenDensity" value="320" />
+@@ -579,9 +536,7 @@
+           <option name="api" value="34" />
+           <option name="brand" value="google" />
+           <option name="codename" value="tokay" />
+-          <option name="default" value="true" />
+           <option name="id" value="tokay" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 9" />
+           <option name="screenDensity" value="420" />
+@@ -592,9 +547,7 @@
+           <option name="api" value="35" />
+           <option name="brand" value="google" />
+           <option name="codename" value="tokay" />
+-          <option name="default" value="true" />
+           <option name="id" value="tokay" />
+-          <option name="labId" value="google" />
+           <option name="manufacturer" value="Google" />
+           <option name="name" value="Pixel 9" />
+           <option name="screenDensity" value="420" />
