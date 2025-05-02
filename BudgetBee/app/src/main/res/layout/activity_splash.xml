@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.654" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,7 +29,7 @@
         android:layout_marginStart="151dp"
         android:layout_marginTop="169dp"
         android:layout_marginEnd="152dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#FFEB3B"
         app:layout_constraintBottom_toTopOf="@+id/buttonSplash"
         app:layout_constraintEnd_toEndOf="parent"
