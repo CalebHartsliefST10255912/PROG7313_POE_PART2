@@ -4,12 +4,14 @@ import androidx.room.*
 
 @Dao
 interface GoalsDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertGoal(goal: GoalsEntity)
 
-    @Query("SELECT * FROM goals LIMIT 1")
-    suspend fun getGoal(): GoalsEntity?
+    @Query("SELECT * FROM goals WHERE userId = :userId LIMIT 1")
+    suspend fun getGoal(userId: Int): GoalsEntity?
 
-    @Query("DELETE FROM goals")
-    suspend fun clearGoals()
+    @Query("DELETE FROM goals WHERE userId = :userId")
+    suspend fun clearGoals(userId: Int)
 }
+

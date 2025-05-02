@@ -2,7 +2,6 @@ package com.example.budgetbee
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.Date
 
 @Entity(tableName = "users")
 data class UserEntity(

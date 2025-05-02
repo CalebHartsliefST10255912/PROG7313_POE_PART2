@@ -52,7 +52,6 @@
         android:progressTint="@android:color/holo_green_dark"
         android:layout_marginBottom="8dp" />
 
-    <!-- ✅ NEW: Percent text -->
     <TextView
         android:id="@+id/textProgressPercent"
         android:layout_width="wrap_content"

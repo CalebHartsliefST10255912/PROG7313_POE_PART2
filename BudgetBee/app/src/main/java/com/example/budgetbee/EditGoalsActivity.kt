@@ -12,12 +12,23 @@ class EditGoalsActivity : AppCompatActivity() {
     private lateinit var db: AppDatabase
     private lateinit var editMin: EditText
     private lateinit var editMax: EditText
+    private var userId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_goals)
 
         db = AppDatabase.getDatabase(this)
+
+        // ✅ Get userId from SharedPreferences
+        val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        userId = prefs.getInt("userId", -1)
+
+        if (userId == -1) {
+            Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
 
         editMin = findViewById(R.id.editMinGoal)
         editMax = findViewById(R.id.editMaxGoal)
@@ -36,9 +47,15 @@ class EditGoalsActivity : AppCompatActivity() {
             }
 
             CoroutineScope(Dispatchers.IO).launch {
-                db.goalsDao().clearGoals()
-                db.goalsDao().insertGoal(GoalsEntity(minMonthlyGoal = min, maxMonthlyGoal = max))
-                runOnUiThread {
+                db.goalsDao().clearGoals(userId)
+                db.goalsDao().insertGoal(
+                    GoalsEntity(
+                        userId = userId,
+                        minMonthlyGoal = min,
+                        maxMonthlyGoal = max
+                    )
+                )
+                withContext(Dispatchers.Main) {
                     Toast.makeText(this@EditGoalsActivity, "Goals saved", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@EditGoalsActivity, GoalsActivity::class.java))
                     finish()
@@ -54,8 +71,8 @@ class EditGoalsActivity : AppCompatActivity() {
 
     private fun loadGoals() {
         CoroutineScope(Dispatchers.IO).launch {
-            val goal = db.goalsDao().getGoal()
-            runOnUiThread {
+            val goal = db.goalsDao().getGoal(userId)
+            withContext(Dispatchers.Main) {
                 goal?.let {
                     editMin.setText(it.minMonthlyGoal.toString())
                     editMax.setText(it.maxMonthlyGoal.toString())

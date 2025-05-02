@@ -1,5 +1,6 @@
 package com.example.budgetbee
 
+import CategoryFragment
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.budgetbee.databinding.ActivityMainBinding
+
+
 
 class MainActivity : AppCompatActivity() {
 

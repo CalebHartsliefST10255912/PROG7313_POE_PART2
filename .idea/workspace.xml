@@ -5,12 +5,17 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_add_expense.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_categories.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_delete_account_confirm.xml">
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_category_details.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
@@ -45,47 +50,7 @@
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_new_category.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_notification.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_profile.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_register.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_reset_password.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_settings.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_shop.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml">
-        <config>
-          <theme>@style/Theme.BudgetBee</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_terms_conditions.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
@@ -105,7 +70,22 @@
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_add_expense.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_category_details.xml">
+        <config>
+          <theme>@style/Theme.BudgetBee</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_goals.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
@@ -115,17 +95,17 @@
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_profile.xml">
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_transaction.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml">
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_category.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml">
+      <layout url="file://$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_expense.xml">
         <config>
           <theme>@style/Theme.BudgetBee</theme>
         </config>
@@ -159,12 +139,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoriesActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/CategoryDetailsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/ExpenseDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/SearchView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/TransactionsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/activity_transactions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/fragment_transaction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_expense.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BudgetBee/app/src/main/res/layout/item_expense.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +159,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\caleb\.android\avd\Medium_Phone_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\luke jordan\.android\avd\Pixel_9_API_24.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/BudgetBee">
       <ProjectState />
@@ -195,6 +180,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
       </list>
@@ -203,6 +189,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="feature/category-navbar" />
         <entry key="$PROJECT_DIR$" value="feature/search" />
       </map>
     </option>
@@ -214,52 +201,41 @@
     &quot;assignee&quot;: &quot;ST10258101&quot;
   }
 }</component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-      </list>
-    </option>
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/CalebHartsliefST10255912/PROG7313_POE_PART2.git&quot;,
-    &quot;accountId&quot;: &quot;5476b842-0d1d-4da0-bec4-177f3dadd993&quot;
+    &quot;accountId&quot;: &quot;1c5dfbf6-15f7-4266-9de1-1ba3e2158fd8&quot;
   }
 }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
-    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2wLs2pbpV9oyYByIYyNT724ibYV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.BudgetBee.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/search&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/luke jordan/Documents/GitHub/PROG7313_POE_PART2/BudgetBee&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.BudgetBee.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "feature/category-expense-navbar",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java",
+    "last_opened_file_path": "C:/Users/luke jordan/Documents/Varsity College/2025/PROG7313_POE_PART2/BudgetBee/app/src/main/res/drawable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\caleb\AndroidStudioProjects\PROG7313_POE_PART2\BudgetBee" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luke jordan\Documents\Varsity College\2025\PROG7313_POE_PART2\BudgetBee\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -280,7 +256,6 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
-      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -361,7 +336,87 @@
       <option name="project" value="LOCAL" />
       <updated>1746104918623</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1746118429724</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746118429727</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1746118666661</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746118666661</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1746118811641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746118811642</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Category functionality Along with making goals give an amount for total goal amount">
+      <option name="closed" value="true" />
+      <created>1746183527518</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746183527519</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added Category functionality Along with making goals give an amount for total goal amount">
+      <option name="closed" value="true" />
+      <created>1746185211928</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746185211930</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added Category functionality Along with making goals give an amount for total goal amount, intention to add navbar functionality">
+      <option name="closed" value="true" />
+      <created>1746186692271</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746186692273</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Goals Implementation">
+      <option name="closed" value="true" />
+      <created>1746189228076</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746189228077</updated>
+    </task>
+    <task id="LOCAL-00010" summary="I Tried my best, nav bar on most functions, but not in depth on goal or CategoryDetailsFragment.kt">
+      <option name="closed" value="true" />
+      <created>1746193315997</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746193315997</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Can Add Expense">
+      <option name="closed" value="true" />
+      <created>1746202504113</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746202504113</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Can Add Expense with category">
+      <option name="closed" value="true" />
+      <created>1746204173914</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746204173916</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,19 +434,110 @@
     <MESSAGE value="Merge pull request #2 from CalebHartsliefST10255912/Login-And-Register&#10;&#10;Login and register" />
     <MESSAGE value="updated goals code with no build errors" />
     <MESSAGE value="separated code into 2 views and the code works and builds with no errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="separated code into 2 views and the code works and builds with no errors" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Added Category functionality Along with making goals give an amount for total goal amount" />
+    <MESSAGE value="Added Category functionality Along with making goals give an amount for total goal amount, intention to add navbar functionality" />
+    <MESSAGE value="Goals Implementation" />
+    <MESSAGE value="I Tried my best, nav bar on most functions, but not in depth on goal or CategoryDetailsFragment.kt" />
+    <MESSAGE value="Can Add Expense" />
+    <MESSAGE value="Can Add Expense with category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can Add Expense with category" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>28</line>
+          <properties class="com.example.budgetbee.AddExpenseActivity" method="onCreate">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>29</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>32</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>35</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>38</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>42</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>43</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>44</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>54</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/BudgetBee/app/src/main/java/com/example/budgetbee/AddExpenseActivity.kt</url>
+          <line>48</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.budgetbee">
           <value>
-            <CheckInfo lastCheckTimestamp="1746184036734" />
+            <CheckInfo lastCheckTimestamp="1746184553094" />
           </value>
         </entry>
         <entry key="com.example.budgetbee.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1746184036761" />
+            <CheckInfo lastCheckTimestamp="1746184553085" />
           </value>
         </entry>
       </map>

@@ -28,18 +28,24 @@
         <!-- Login and Register Activities -->
         <activity android:name=".LoginActivity" android:exported="true"/>
         <activity android:name=".RegisterActivity" android:exported="true"/>
-
-        <!-- HomeActivity (after login success) -->
-        <activity android:name=".MainActivity" android:exported="true"/>
+        <activity android:name=".HomeActivity" android:exported="true"/>
         <activity android:name=".ResetPasswordActivity" android:exported="true"/>
 
         <!-- HomeActivity (after login success) -->
                <!--  <activity android:name=".HomeActivity" android:exported="true"/> commented out by vinay cause error : Duplicate registration for activity com.example.budgetbee.HomeActivity-->
 
         <activity android:name=".GoalsActivity" android:exported="true" />
+
         <activity android:name=".EditGoalsActivity" android:exported="true" />
 
-        <!-- EditProfile       -->
+        <activity android:name=".CategoriesActivity" android:exported="true" />
+        <activity android:name=".CategoryDetailsActivity" android:exported="true" />
+
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".AddExpenseActivity" android:exported="true" />
+
+        <activity android:name=".TransactionActivity" android:exported="true" />
+
         <activity android:name=".EditProfileActivity" />
     </application>
 </manifest>
