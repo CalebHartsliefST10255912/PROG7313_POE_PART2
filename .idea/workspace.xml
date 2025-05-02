@@ -116,7 +116,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/category-expense" />
+        <entry key="$PROJECT_DIR$" value="feature/category-goals" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -153,7 +153,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "feature/category-goals",
+    "git-widget-placeholder": "feature/expense-new",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/vroop/AndroidStudioProjects/PROG7313_POE_PART2/BudgetBee/app/src/main/java",
     "last_opened_file_path": "C:/Users/luke jordan/Documents/Varsity College/2025/PROG7313_POE_PART2/BudgetBee/app/src/main/res/drawable"
@@ -350,12 +350,12 @@
       <map>
         <entry key="com.example.budgetbee">
           <value>
-            <CheckInfo lastCheckTimestamp="1746097544912" />
+            <CheckInfo lastCheckTimestamp="1746184553094" />
           </value>
         </entry>
         <entry key="com.example.budgetbee.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1746097544933" />
+            <CheckInfo lastCheckTimestamp="1746184553085" />
           </value>
         </entry>
       </map>
